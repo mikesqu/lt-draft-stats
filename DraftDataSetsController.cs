@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
+using draft_data;
 
 
 namespace WebApi.Controllers;
@@ -19,7 +21,33 @@ public class DashboardController : ControllerBase
     [HttpGet("")]
     public async Task<IActionResult> GetStaticSite()
     {
-        return null;
+        using var db = new DraftContext();
+
+        _logger.LogInformation("Querying for a last data set");
+
+        var lastDataSet = await db.DataSets
+            .AsNoTracking()
+            .LastAsync();
+
+        // calculate variables based on lastDataSet
+
+        int hasToProvideData = 0;
+        int hasToProvideDataUntilExact = 0;
+        int draftProcedureInProgress = 0;
+        int isAsignedAndNeedsToArrive = 0;
+        int quicklyHasToContactAndArrive = 0;
+        int hasToAttendMedicalScreening = 0;
+        int draftHasBeenPostponed = 0;
+
+        return Ok(DomainConstants.GetPage(
+            hasToProvideData: hasToProvideData,
+            hasToProvideDataUntilExact: hasToProvideDataUntilExact,
+            draftProcedureInProgress: draftProcedureInProgress,
+            isAsignedAndNeedsToArrive: isAsignedAndNeedsToArrive,
+            quicklyHasToContactAndArrive: quicklyHasToContactAndArrive,
+            hasToAttendMedicalScreening: hasToAttendMedicalScreening,
+            draftHasBeenPostponed: draftHasBeenPostponed));
+
     }
 
 
