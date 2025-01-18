@@ -1,6 +1,16 @@
 @draft_data_HostAddress = http://localhost:5188
 
-GET {{draft_data_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
+GET /list.php?region=6 HTTP/2
+Host: sauktiniai.karys.lt
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:133.0) Gecko/20100101 Firefox/133.0
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Range-Unit: items
+Range: 0-7999
+Referer: https://sauktiniai.karys.lt/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+TE: trailers
