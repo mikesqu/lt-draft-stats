@@ -1,3 +1,4 @@
+using System.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -18,7 +19,14 @@ namespace draft_data
 
         public async Task Execute(IJobExecutionContext context)
         {
-            _logger.LogInformation($"starting {nameof(DailyDataRefresher)}.{nameof(Execute)} ...");
+             Random r = new Random();
+            int randomMinutes = (int) r.NextInt64(10, 90);
+            TimeSpan delay = TimeSpan.FromMinutes(randomMinutes);
+            await Task.Delay(delay);
+
+            _logger.LogInformation($"starting {nameof(DailyDataRefresher)}.{nameof(Execute)} ... after delay {delay.TotalMinutes} minutes");
+
+           
             // ---------------------------------------
 
 
