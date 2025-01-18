@@ -1,0 +1,6 @@
+@draft_data_HostAddress = http://localhost:5188
+
+GET {{draft_data_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
