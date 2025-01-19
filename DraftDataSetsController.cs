@@ -21,47 +21,37 @@ public class DashboardController : ControllerBase
     [HttpGet("")]
     public async Task<IActionResult> GetStaticSite()
     {
-        using var db = new DraftContext();
 
-        _logger.LogInformation("Querying for a last data set");
+        string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        string filePath = Path.Combine(appDataPath, "draft-content-root/draft-page.html");
 
-        var lastDataSet = await db.DataSets
-            .AsNoTracking()
-            .LastAsync();
+        if (!System.IO.File.Exists(filePath))
+        {
+            _logger.LogError($"File not found: {filePath}");
+            return NotFound("The requested file was not found.");
+        }
 
-        // calculate variables based on lastDataSet
+        string content = await System.IO.File.ReadAllTextAsync(filePath);
+        return Content(content, "text/html");
 
-        int hasToProvideData = 0;
-        int hasToProvideDataUntilExact = 0;
-        int draftProcedureInProgress = 0;
-        int isAsignedAndNeedsToArrive = 0;
-        int quicklyHasToContactAndArrive = 0;
-        int hasToAttendMedicalScreening = 0;
-        int draftHasBeenPostponed = 0;
-
-        return Ok(DomainConstants.GetPage(
-            hasToProvideData: hasToProvideData,
-            hasToProvideDataUntilExact: hasToProvideDataUntilExact,
-            draftProcedureInProgress: draftProcedureInProgress,
-            isAsignedAndNeedsToArrive: isAsignedAndNeedsToArrive,
-            quicklyHasToContactAndArrive: quicklyHasToContactAndArrive,
-            hasToAttendMedicalScreening: hasToAttendMedicalScreening,
-            draftHasBeenPostponed: draftHasBeenPostponed));
 
     }
 
 
 
     [HttpGet("data-sets")]
-    public async Task<IList<DataSet>> GetDataSets()
+    public async Task<DataSet> GetDataSets()
     {
         using var db = new DraftContext();
 
         _logger.LogInformation("Querying for a data sets");
 
         var dataSets = await db.DataSets
-            .AsNoTracking()
-            .ToListAsync();
+                .OrderBy(d => d.CreatedOn)
+                .AsNoTracking()
+                .Include(d => d.Draftees)
+                .LastAsync();
+
 
         return dataSets;
     }

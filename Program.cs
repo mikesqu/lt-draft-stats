@@ -14,47 +14,24 @@ internal class Program
 
         // levelSwitch: new LoggingLevelSwitch(LogEventLevel.Warning), outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj} {NewLine} {Exception}"
         var serilogger = new LoggerConfiguration()
-            .WriteTo.Async(a =>
-                a.File(builder.Environment.ContentRootPath + "Logs/log.txt",
-                rollingInterval: RollingInterval.Day,
-                outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj}{NewLine}{Exception}",
-                shared: true,
-                fileSizeLimitBytes: null,
-                levelSwitch: new LoggingLevelSwitch(LogEventLevel.Warning))
-            )
+            // .WriteTo.Async(a =>
+            //     a.File(builder.Environment.ContentRootPath + "Logs/log.txt",
+            //     rollingInterval: RollingInterval.Day,
+            //     outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj}{NewLine}{Exception}",
+            //     shared: true,
+            //     fileSizeLimitBytes: null,
+            //     levelSwitch: new LoggingLevelSwitch(LogEventLevel.Information))
+            // )
             .WriteTo.Async(a =>
                 a.Console(
                     outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj}{NewLine}{Exception}",
-                    levelSwitch: new LoggingLevelSwitch(LogEventLevel.Warning)
+                    levelSwitch: new LoggingLevelSwitch(LogEventLevel.Information)
                 )
-            ).Filter.ByExcluding((logEvent) =>
-            {
-                string message = logEvent.MessageTemplate.Render(logEvent.Properties).ToLower();
-
-                if (message.Contains("select "))
-                {
-                    if
-                    (
-                        message.Contains("insert ") || message.Contains("update ") || message.ToLower().Contains("delete ")
-                    )
-                    {
-                        return false;
-                    }
-                    else
-                    {
-                        // exclude because doesnt contain data modification statements
-                        return true;
-                    }
-                }
-                else
-                {
-                    return false;
-                }
-            })
+            )
             .CreateLogger();
 
 
-
+        builder.Logging.ClearProviders();
         builder.Logging.AddSerilog(serilogger);
 
 
@@ -65,6 +42,8 @@ internal class Program
 
 
         builder.Services.AddControllers();
+
+        builder.Services.AddHttpClient();
 
 
         builder.Services.AddDbContext<DraftContext>();
@@ -111,6 +90,9 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
+        app.UseStaticFiles();
+
 
         app.UseRouting();
         app.MapControllers();

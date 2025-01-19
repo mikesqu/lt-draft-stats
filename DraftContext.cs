@@ -18,7 +18,6 @@ public class DraftContext : DbContext
         var folder = Environment.SpecialFolder.LocalApplicationData;
         var path = Environment.GetFolderPath(folder);
         DbPath = System.IO.Path.Join(path, "draft-datasets.db");
-        Console.WriteLine($"DraftContext constructor DbPath: {DbPath}");
     }
 
     // The following configures EF to create a Sqlite database file in the
@@ -88,7 +87,7 @@ public class Draftee
 
     public int DrafteeId { get; set; }
     public int Position { get; set; }
-    public int Number { get; set; }
+    public string Number { get; set; }
     public string Name { get; set; }
     public string LastName { get; set; }
     public int BirthDateYear { get; set; }
