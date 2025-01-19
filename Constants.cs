@@ -3,6 +3,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace draft_data
 {
@@ -17,8 +18,10 @@ namespace draft_data
             int isAsignedAndNeedsToArrive,
             int quicklyHasToContactAndArrive,
             int hasToAttendMedicalScreening,
-            int draftHasBeenPostponed
-        )
+            int draftHasBeenPostponed,
+            int hasToAttendAdditionalMedScreening,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreening,
+            DateTime updatedOn)
         {
             // string prevStateColorCode;
             // if (prevState == "Online")
@@ -54,7 +57,7 @@ namespace draft_data
                 <html>
                 <head>
                     <meta http-equiv=""content-type"" content=""text/html; charset=UTF-8"">
-                    <title>Sauktinis</title>
+                    <title>ltdraft</title>
                     <meta charset=""UTF-8"">
                     <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
                     <link rel=""stylesheet"" href=""W3.CSS%20Template_files/w3.css"">
@@ -97,9 +100,21 @@ namespace draft_data
                         Privalo atvykti pasitikrinti sveikatos
                     </div>
                     <div class=""w3-quarter w3-section"">
+                        <span class=""w3-xlarge"">{hasToAttendAdditionalMedScreening}</span><br>
+                        Privalo atvykti papildomai pasitikrinti sveikatos
+                    </div>
+                    <div class=""w3-quarter w3-section"">
+                        <span class=""w3-xlarge"">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</span><br>
+                        Privalo pateikti medicininius dokumentus po papildomo ištyrimo
+                    </div>
+                    <div class=""w3-quarter w3-section"">
                         <span class=""w3-xlarge"">{draftHasBeenPostponed}</span><br>
                         Privalomoji karo tarnyba atidėta
                     </div>
+                    </div>
+
+                    <div>
+                        <p> Informacija atnaujinta: {updatedOn.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture)} </p>
                     </div>
                 </body>
                 </html>";
