@@ -137,7 +137,7 @@ namespace draft_data
                 Console.WriteLine("Raw Response Content (Uncompressed):");
             }
 
-            Console.WriteLine($"jsonContent preview: {jsonContent}");
+            Console.WriteLine($"jsonContent preview: {jsonContent.Substring(0, 100)}");
 
             if (string.IsNullOrWhiteSpace(jsonContent))
             {
