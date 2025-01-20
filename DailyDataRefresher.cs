@@ -168,7 +168,6 @@ namespace draft_data
                 using (var reader = new StreamReader(decompressionStream, Encoding.UTF8))
                 {
                     jsonContent = await reader.ReadToEndAsync();
-                    Console.WriteLine("Decompressed Response Content:");
                 }
             }
             else if (response.Content.Headers.ContentEncoding.Contains("deflate"))
@@ -179,7 +178,6 @@ namespace draft_data
                 using (var reader = new StreamReader(decompressionStream, Encoding.UTF8))
                 {
                     jsonContent = await reader.ReadToEndAsync();
-                    Console.WriteLine("Decompressed Response Content (Deflate):");
 
                 }
             }
@@ -187,10 +185,8 @@ namespace draft_data
             {
                 // If not compressed, read as a normal string
                 jsonContent = await response.Content.ReadAsStringAsync();
-                Console.WriteLine("Raw Response Content (Uncompressed):");
             }
 
-            Console.WriteLine($"jsonContent preview: {jsonContent.Substring(0, 20)}");
 
             if (string.IsNullOrWhiteSpace(jsonContent))
             {
