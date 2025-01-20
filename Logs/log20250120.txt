@@ -1,0 +1,584 @@
+15:07:50.310 +02:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5188
+15:07:50.326 +02:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+15:07:50.326 +02:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+15:07:50.326 +02:00 [INF] Microsoft.Hosting.Lifetime Content root path: /home/mykolas/sd/cloned-repos/personal/draft-data
+15:07:57.891 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:07:57.923 +02:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+15:07:57.925 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:07:57.946 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:07:57.960 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:07:57.969 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 17.9767ms
+15:07:57.970 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:07:57.975 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 84.9387ms
+15:08:07.362 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:07.363 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:07.363 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:07.364 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:07.365 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 1.1725ms
+15:08:07.365 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:07.365 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 2.8826ms
+15:08:07.831 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:07.832 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:07.832 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:07.832 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:07.832 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3433ms
+15:08:07.832 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:07.832 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.577ms
+15:08:08.264 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:08.265 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:08.265 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:08.265 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:08.265 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3948ms
+15:08:08.265 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:08.265 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.9385ms
+15:08:08.599 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:08.599 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:08.599 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:08.600 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:08.600 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.5178ms
+15:08:08.600 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:08.600 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.323ms
+15:08:08.949 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:08.949 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:08.949 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:08.949 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:08.950 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3869ms
+15:08:08.950 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:08.950 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.8906ms
+15:08:09.189 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:09.189 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.190 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:09.190 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:09.190 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3947ms
+15:08:09.190 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.190 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.9107ms
+15:08:09.502 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:09.502 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.502 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:09.503 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:09.503 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.5177ms
+15:08:09.503 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.503 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.0466ms
+15:08:09.719 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:09.720 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.720 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:09.720 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:09.720 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.5243ms
+15:08:09.720 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.721 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.2131ms
+15:08:09.985 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:09.985 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.985 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:09.985 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:09.985 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3506ms
+15:08:09.985 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:09.986 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.9409ms
+15:08:10.216 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:10.216 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.216 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:10.217 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:10.217 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3463ms
+15:08:10.217 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.217 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.9619ms
+15:08:10.415 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:10.416 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.416 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:10.416 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:10.416 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.345ms
+15:08:10.416 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.416 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7584ms
+15:08:10.583 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:10.584 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.584 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:10.584 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:10.584 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3258ms
+15:08:10.584 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.584 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6754ms
+15:08:10.759 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:10.759 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.760 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:10.760 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:10.760 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.6221ms
+15:08:10.760 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.761 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.366ms
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.333ms
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:10.928 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7363ms
+15:08:11.073 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:11.073 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.073 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:11.074 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:11.074 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.5849ms
+15:08:11.074 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.074 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.2211ms
+15:08:11.217 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:11.217 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.217 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:11.218 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:11.218 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3955ms
+15:08:11.218 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.218 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.2859ms
+15:08:11.342 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:11.342 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.343 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:11.343 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:11.343 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3634ms
+15:08:11.343 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.343 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.8944ms
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3372ms
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.487 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7678ms
+15:08:11.647 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:11.647 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.647 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:11.648 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:11.648 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3302ms
+15:08:11.648 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.648 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7235ms
+15:08:11.796 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:11.796 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.796 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:11.796 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:11.797 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.6133ms
+15:08:11.797 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:11.797 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.201ms
+15:08:12.060 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:12.060 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.060 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:12.061 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:12.061 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3515ms
+15:08:12.061 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.061 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.694ms
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2948ms
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.302 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.677ms
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3158ms
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.462 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6882ms
+15:08:12.666 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:12.666 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.666 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:12.667 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:12.667 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2642ms
+15:08:12.667 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.667 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.589ms
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3029ms
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.824 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6498ms
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2727ms
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:12.994 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6688ms
+15:08:13.146 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:13.146 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.147 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:13.147 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:13.147 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3073ms
+15:08:13.147 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.147 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7155ms
+15:08:13.339 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:13.339 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.340 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:13.340 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:13.340 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2599ms
+15:08:13.340 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.340 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6248ms
+15:08:13.504 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:13.504 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.504 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:13.505 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:13.505 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.4859ms
+15:08:13.505 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.505 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.068ms
+15:08:13.681 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:13.681 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.682 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:13.682 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:13.682 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.471ms
+15:08:13.682 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.682 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.0254ms
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3035ms
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.856 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6491ms
+15:08:13.969 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:13.970 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.970 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:13.970 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:13.970 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3702ms
+15:08:13.970 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:13.970 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7585ms
+15:08:14.162 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:14.163 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.163 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:14.163 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:14.163 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2684ms
+15:08:14.163 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.163 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.546ms
+15:08:14.340 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:14.340 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.341 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:14.341 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:14.341 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3658ms
+15:08:14.341 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.341 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.8599ms
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3893ms
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.485 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7116ms
+15:08:14.757 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:14.757 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.757 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:14.758 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:14.758 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.4232ms
+15:08:14.758 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.758 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7215ms
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3964ms
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:14.901 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7859ms
+15:08:15.182 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:15.183 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:15.183 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:15.183 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:15.183 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3172ms
+15:08:15.183 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:15.183 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6012ms
+15:08:15.720 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:15.720 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:15.720 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:15.721 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:15.721 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2585ms
+15:08:15.721 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:15.721 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.506ms
+15:08:15.904 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:15.904 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:15.904 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:15.905 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:15.905 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2842ms
+15:08:15.905 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:15.905 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5592ms
+15:08:16.083 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:16.083 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.083 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:16.083 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:16.084 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2086ms
+15:08:16.084 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.084 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.443ms
+15:08:16.255 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:16.256 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.256 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:16.256 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:16.256 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2891ms
+15:08:16.256 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.256 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5777ms
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2309ms
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.434 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.4863ms
+15:08:16.698 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:16.698 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.698 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:16.699 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:16.699 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2614ms
+15:08:16.699 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.699 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5209ms
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2604ms
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:16.871 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5322ms
+15:08:17.030 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:17.030 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.030 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:17.031 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:17.031 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2763ms
+15:08:17.031 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.031 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.599ms
+15:08:17.388 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:17.389 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.389 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:17.389 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:17.389 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2291ms
+15:08:17.389 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.389 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5315ms
+15:08:17.524 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:17.524 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.524 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:17.525 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:17.525 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2585ms
+15:08:17.525 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.525 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5599ms
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2419ms
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.735 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5478ms
+15:08:17.880 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:17.880 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.881 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:17.881 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:17.881 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.337ms
+15:08:17.881 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:17.881 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6602ms
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2436ms
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.033 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.4994ms
+15:08:18.218 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:18.218 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.218 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:18.219 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:18.219 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2652ms
+15:08:18.219 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.219 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5685ms
+15:08:18.380 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:18.380 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.380 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:18.381 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:18.381 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2453ms
+15:08:18.381 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.381 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5344ms
+15:08:18.519 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:18.519 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.519 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:18.520 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:18.520 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2974ms
+15:08:18.520 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.520 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6402ms
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2619ms
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.714 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5076ms
+15:08:18.983 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:18.983 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.984 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:18.984 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:18.984 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2189ms
+15:08:18.984 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:18.984 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.4447ms
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2736ms
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.152 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5859ms
+15:08:19.332 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:19.332 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.332 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:19.332 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:19.333 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3011ms
+15:08:19.333 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.333 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6831ms
+15:08:19.508 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:19.508 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.508 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:19.509 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:19.509 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.4972ms
+15:08:19.509 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.509 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.9154ms
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2575ms
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.685 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5361ms
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2379ms
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:19.807 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5284ms
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.1876ms
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.091 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.483ms
+15:08:20.250 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:20.250 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.251 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:20.251 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:20.251 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.3348ms
+15:08:20.251 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.251 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.7736ms
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.2547ms
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.402 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.5038ms
+15:08:20.551 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:08:20.551 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.551 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:08:20.552 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:08:20.552 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.317ms
+15:08:20.552 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:08:20.552 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 0.6438ms
+15:08:29.354 +02:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+15:23:57.764 +02:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5188
+15:23:57.780 +02:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+15:23:57.781 +02:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+15:23:57.781 +02:00 [INF] Microsoft.Hosting.Lifetime Content root path: /home/mykolas/sd/cloned-repos/personal/draft-data
+15:24:17.490 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/swagger/index.html - null null
+15:24:17.545 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/swagger/index.html - 200 null text/html;charset=utf-8 55.8629ms
+15:24:17.801 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/swagger/v1/swagger.json - null null
+15:24:17.866 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 65.1702ms
+15:24:23.835 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:24:23.851 +02:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+15:24:23.852 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:24:23.869 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:24:23.878 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:24:23.882 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 9.9775ms
+15:24:23.883 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:24:23.884 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 49.3318ms
+15:24:23.906 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/W3.CSS Template_files/w3.css - null null
+15:24:23.919 +02:00 [INF] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware Sending file. Request path: '/W3.CSS Template_files/w3.css'. Physical path: '/home/mykolas/sd/cloned-repos/personal/draft-data/wwwroot/W3.CSS Template_files/w3.css'
+15:24:23.919 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/W3.CSS Template_files/w3.css - 200 23427 text/css 13.4614ms
+15:24:23.928 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/W3.CSS Template_files/css.css - null null
+15:24:23.929 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/W3.CSS Template_files/font-awesome.min.css - null null
+15:24:23.930 +02:00 [INF] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware Sending file. Request path: '/W3.CSS Template_files/css.css'. Physical path: '/home/mykolas/sd/cloned-repos/personal/draft-data/wwwroot/W3.CSS Template_files/css.css'
+15:24:23.930 +02:00 [INF] Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware Sending file. Request path: '/W3.CSS Template_files/font-awesome.min.css'. Physical path: '/home/mykolas/sd/cloned-repos/personal/draft-data/wwwroot/W3.CSS Template_files/font-awesome.min.css'
+15:24:23.930 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/W3.CSS Template_files/css.css - 200 1866 text/css 1.7059ms
+15:24:23.930 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/W3.CSS Template_files/font-awesome.min.css - 200 31000 text/css 1.3024ms
+15:25:18.453 +02:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+15:25:25.933 +02:00 [INF] Quartz.Core.SchedulerSignalerImpl Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+15:25:25.945 +02:00 [INF] Quartz.Core.QuartzScheduler Quartz Scheduler created
+15:25:25.945 +02:00 [INF] Quartz.Core.QuartzScheduler JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+15:25:25.946 +02:00 [INF] Quartz.Simpl.RAMJobStore RAMJobStore initialized.
+15:25:25.947 +02:00 [INF] Quartz.Impl.StdSchedulerFactory Quartz Scheduler 3.13.1.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+15:25:25.947 +02:00 [INF] Quartz.Impl.StdSchedulerFactory Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+15:25:25.947 +02:00 [INF] Quartz.Impl.StdSchedulerFactory Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+15:25:26.008 +02:00 [INF] Microsoft.Hosting.Lifetime Now listening on: http://localhost:5188
+15:25:26.008 +02:00 [INF] Microsoft.Hosting.Lifetime Application started. Press Ctrl+C to shut down.
+15:25:26.008 +02:00 [INF] Microsoft.Hosting.Lifetime Hosting environment: Development
+15:25:26.008 +02:00 [INF] Microsoft.Hosting.Lifetime Content root path: /home/mykolas/sd/cloned-repos/personal/draft-data
+15:25:26.011 +02:00 [INF] Quartz.Core.QuartzScheduler Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+15:25:26.032 +02:00 [INF] draft_data.DailyDataRefresher starting DailyDataRefresher.Execute 
+15:25:26.053 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler Start processing HTTP request GET https://sauktiniai.karys.lt/list.php?region=1
+15:25:26.055 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Sending HTTP request GET https://sauktiniai.karys.lt/list.php?region=1
+15:25:26.436 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Received HTTP response headers after 379.0593ms - 200
+15:25:26.436 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler End processing HTTP request after 388.8183ms - 200
+15:25:26.504 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler Start processing HTTP request GET https://sauktiniai.karys.lt/list.php?region=2
+15:25:26.504 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Sending HTTP request GET https://sauktiniai.karys.lt/list.php?region=2
+15:25:26.701 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Received HTTP response headers after 197.3794ms - 200
+15:25:26.701 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler End processing HTTP request after 197.5785ms - 200
+15:25:26.798 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler Start processing HTTP request GET https://sauktiniai.karys.lt/list.php?region=3
+15:25:26.798 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Sending HTTP request GET https://sauktiniai.karys.lt/list.php?region=3
+15:25:27.107 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Received HTTP response headers after 308.585ms - 200
+15:25:27.107 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler End processing HTTP request after 308.8224ms - 200
+15:25:27.252 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler Start processing HTTP request GET https://sauktiniai.karys.lt/list.php?region=4
+15:25:27.252 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Sending HTTP request GET https://sauktiniai.karys.lt/list.php?region=4
+15:25:27.383 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Received HTTP response headers after 131.3759ms - 200
+15:25:27.383 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler End processing HTTP request after 131.6083ms - 200
+15:25:27.509 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler Start processing HTTP request GET https://sauktiniai.karys.lt/list.php?region=5
+15:25:27.509 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Sending HTTP request GET https://sauktiniai.karys.lt/list.php?region=5
+15:25:27.652 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Received HTTP response headers after 142.8935ms - 200
+15:25:27.653 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler End processing HTTP request after 143.2147ms - 200
+15:25:27.705 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler Start processing HTTP request GET https://sauktiniai.karys.lt/list.php?region=6
+15:25:27.705 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Sending HTTP request GET https://sauktiniai.karys.lt/list.php?region=6
+15:25:28.069 +02:00 [INF] System.Net.Http.HttpClient.Default.ClientHandler Received HTTP response headers after 363.4072ms - 200
+15:25:28.069 +02:00 [INF] System.Net.Http.HttpClient.Default.LogicalHandler End processing HTTP request after 363.7446ms - 200
+15:25:28.223 +02:00 [INF] draft_data.DailyDataRefresher received response preview region 1: [{"pos":"1","number"
+15:25:28.223 +02:00 [INF] draft_data.DailyDataRefresher received response preview region 2: [{"pos":"1","number"
+15:25:28.223 +02:00 [INF] draft_data.DailyDataRefresher received response preview region 3:[{"pos":"1","number"
+15:25:28.223 +02:00 [INF] draft_data.DailyDataRefresher received response preview region 4:[{"pos":"1","number"
+15:25:28.223 +02:00 [INF] draft_data.DailyDataRefresher received response preview region 5: [{"pos":"1","number"
+15:25:28.223 +02:00 [INF] draft_data.DailyDataRefresher received response preview region 6: [{"pos":"1","number"
+15:25:28.426 +02:00 [INF] draft_data.DailyDataRefresher deserialized draftees count region 1 2201
+15:25:28.426 +02:00 [INF] draft_data.DailyDataRefresher deserialized draftees count region 2 5798
+15:25:28.426 +02:00 [INF] draft_data.DailyDataRefresher deserialized draftees count region 3 4339
+15:25:28.426 +02:00 [INF] draft_data.DailyDataRefresher deserialized draftees count region 4 2306
+15:25:28.426 +02:00 [INF] draft_data.DailyDataRefresher deserialized draftees count region 5 2959
+15:25:28.426 +02:00 [INF] draft_data.DailyDataRefresher deserialized draftees count region 6 7546
+15:25:28.427 +02:00 [INF] draft_data.DailyDataRefresher deserialized dataset with 25149 with CreatedOn: "2025-01-20T15:25:28.2237816+02:00"
+15:25:28.460 +02:00 [INF] draft_data.DailyDataRefresher Database path: /home/mykolas/.local/share/draft-datasets.db.
+15:25:28.460 +02:00 [INF] draft_data.DailyDataRefresher Inserting a new dataset
+15:25:34.114 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:25:34.142 +02:00 [WRN] Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware Failed to determine the https port for redirect.
+15:25:34.143 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:34.154 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:25:34.159 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:25:34.165 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 8.4546ms
+15:25:34.165 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:34.167 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 53.9548ms
+15:25:36.560 +02:00 [INF] draft_data.DailyDataRefresher stored new dataset
+15:25:36.564 +02:00 [INF] draft_data.DailyDataRefresher Querying for a last data set
+15:25:37.152 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:25:37.153 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:37.154 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:25:37.157 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:25:37.158 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 3.7786ms
+15:25:37.158 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:37.161 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 8.7314ms
+15:25:38.090 +02:00 [INF] draft_data.DailyDataRefresher File created/updated at: DailyDataRefresher.cs
+15:25:38.090 +02:00 [INF] draft_data.DailyDataRefresher updated page file
+15:25:38.090 +02:00 [INF] draft_data.DailyDataRefresher finishing DailyDataRefresher.Execute ...
+15:25:41.330 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:25:41.331 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:41.332 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:25:41.332 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:25:41.332 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.7109ms
+15:25:41.332 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:41.333 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 2.5492ms
+15:25:48.946 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request starting HTTP/1.1 GET http://localhost:5188/ - null null
+15:25:48.947 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executing endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:48.947 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Route matched with {action = "GetStaticSite", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStaticSite() on controller WebApi.Controllers.DashboardController (draft-data).
+15:25:48.948 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor Executing ContentResult with HTTP Response ContentType of text/html
+15:25:48.948 +02:00 [INF] Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker Executed action WebApi.Controllers.DashboardController.GetStaticSite (draft-data) in 0.7013ms
+15:25:48.948 +02:00 [INF] Microsoft.AspNetCore.Routing.EndpointMiddleware Executed endpoint 'WebApi.Controllers.DashboardController.GetStaticSite (draft-data)'
+15:25:48.948 +02:00 [INF] Microsoft.AspNetCore.Hosting.Diagnostics Request finished HTTP/1.1 GET http://localhost:5188/ - 200 3345 text/html 1.4845ms
+15:26:03.350 +02:00 [INF] Microsoft.Hosting.Lifetime Application is shutting down...
+15:26:03.364 +02:00 [INF] Quartz.Core.QuartzScheduler Scheduler QuartzScheduler_$_NON_CLUSTERED shutting down.
+15:26:03.364 +02:00 [INF] Quartz.Core.QuartzScheduler Scheduler QuartzScheduler_$_NON_CLUSTERED paused.
+15:26:03.368 +02:00 [INF] Quartz.Core.QuartzScheduler Scheduler QuartzScheduler_$_NON_CLUSTERED Shutdown complete.

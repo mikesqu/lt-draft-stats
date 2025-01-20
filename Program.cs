@@ -4,6 +4,7 @@ using draft_data;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
+using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
@@ -11,17 +12,19 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        Console.WriteLine("crp: --- " + builder.Environment.ContentRootPath);
 
         // levelSwitch: new LoggingLevelSwitch(LogEventLevel.Warning), outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj} {NewLine} {Exception}"
         var serilogger = new LoggerConfiguration()
-            // .WriteTo.Async(a =>
-            //     a.File(builder.Environment.ContentRootPath + "Logs/log.txt",
-            //     rollingInterval: RollingInterval.Day,
-            //     outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj}{NewLine}{Exception}",
-            //     shared: true,
-            //     fileSizeLimitBytes: null,
-            //     levelSwitch: new LoggingLevelSwitch(LogEventLevel.Information))
-            // )
+            .WriteTo.Async(a =>
+                a.File(
+                "Logs/log.txt",
+                rollingInterval: RollingInterval.Day,
+                outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj}{NewLine}{Exception}",
+                shared: true,
+                fileSizeLimitBytes: null,
+                levelSwitch: new LoggingLevelSwitch(LogEventLevel.Information))
+            )
             .WriteTo.Async(a =>
                 a.Console(
                     outputTemplate: "{Timestamp:HH:mm:ss.fff zzz} [{Level:u3}] {SourceContext} {Message:lj}{NewLine}{Exception}",
@@ -45,6 +48,23 @@ internal class Program
 
         builder.Services.AddHttpClient();
 
+        try
+        {
+            builder.WebHost.ConfigureKestrel(opts =>
+            {
+                opts.ConfigureHttpsDefaults(cOpts =>
+                {
+                    X509Certificate2 pathToCert = new X509Certificate2(builder.Configuration.GetConnectionString("cert-location"));
+                    cOpts.ServerCertificate = pathToCert;
+                });
+            });
+        }
+        catch (Exception e)
+        {
+            throw new ArgumentException("Failed to find certificate to use");
+        }
+
+
 
         builder.Services.AddDbContext<DraftContext>();
 
@@ -53,33 +73,38 @@ internal class Program
 
         int intervalInHours = int.Parse(hourIntervalStrg);
 
-        builder.Services.AddQuartz(q =>
-                            {
-                                var jobKey = new JobKey("Run the dataset processing job");
-                                q.AddJob<DailyDataRefresher>(opts =>
-                                {
-                                    opts.WithIdentity(jobKey);
-                                });
+        if (builder.Configuration.GetConnectionString("enable-job") == "true")
+        {
 
-                                q.AddTrigger(opts =>
+
+            builder.Services.AddQuartz(q =>
                                 {
-                                    opts.ForJob(jobKey)
-                                    .WithIdentity(jobKey.Name + "trigger")
-                                    .StartNow()
-                                    .WithSimpleSchedule(x =>
+                                    var jobKey = new JobKey("Run the dataset processing job");
+                                    q.AddJob<DailyDataRefresher>(opts =>
                                     {
-                                        x.WithInterval(TimeSpan.FromHours(intervalInHours))
-                                        .RepeatForever();
+                                        opts.WithIdentity(jobKey);
+                                    });
 
+                                    q.AddTrigger(opts =>
+                                    {
+                                        opts.ForJob(jobKey)
+                                        .WithIdentity(jobKey.Name + "trigger")
+                                        .StartNow()
+                                        .WithSimpleSchedule(x =>
+                                        {
+                                            x.WithInterval(TimeSpan.FromHours(intervalInHours))
+                                            .RepeatForever();
+
+                                        });
                                     });
                                 });
-                            });
 
-        builder.Services.AddQuartzHostedService(q =>
-        {
-            q.WaitForJobsToComplete = true;
-            q.AwaitApplicationStarted = true;
-        });
+            builder.Services.AddQuartzHostedService(q =>
+            {
+                q.WaitForJobsToComplete = true;
+                q.AwaitApplicationStarted = true;
+            });
+        }
 
 
         var app = builder.Build();
