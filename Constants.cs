@@ -60,9 +60,9 @@ namespace draft_data
                     <title>ltdraft</title>
                     <meta charset=""UTF-8"">
                     <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
-                    <link rel=""stylesheet"" href=""W3.CSS%20Template_files/w3.css"">
-                    <link rel=""stylesheet"" href=""W3.CSS%20Template_files/css.css"">
-                    <link rel=""stylesheet"" href=""W3.CSS%20Template_files/font-awesome.min.css"">
+                    <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/w3.css"">
+                    <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/css.css"">
+                    <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/font-awesome.min.css"">
                     <style>
                     body, h1, h2, h3, h4, h5, h6 {{ font-family: ""Montserrat"", sans-serif; }}
                     .w3-row-padding img {{ margin-bottom: 12px; }}
