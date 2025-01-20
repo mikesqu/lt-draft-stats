@@ -93,6 +93,7 @@ public class Draftee
     public int BirthDateYear { get; set; }
     public int Department { get; set; }
     public string Info { get; set; }
+    public string Region { get; set; }
 }
 public class KeyValueCombo
 {

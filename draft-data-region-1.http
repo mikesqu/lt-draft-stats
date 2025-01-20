@@ -1,0 +1,16 @@
+@draft_data_HostAddress = http://localhost:5188
+
+GET /list.php?region=1 HTTP/2
+Host: sauktiniai.karys.lt
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 Edg/114.0.1823.79
+Accept: application/json, text/plain, */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd, identity
+Range-Unit: items
+Range: 0-2999
+Referer: https://sauktiniai.karys.lt/
+Sec-Fetch-Dest: empty
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+Priority: u=0
+TE: trailers
