@@ -22,7 +22,9 @@ namespace draft_data
             int hasToAttendAdditionalMedScreening,
             int hasToProvideAddtionalInfoAfterAdditionalMedScreening,
             DateTime updatedOn,
-            int inService)
+            int inService,
+            int totalAcceptable,
+            int totalStartedService)
         {
             // string prevStateColorCode;
             // if (prevState == "Online")
@@ -84,6 +86,14 @@ namespace draft_data
                         <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">25149</span><br>
                             Viso pašaukta
+                        </div>
+                         <div class=""w3-quarter w3-section"">
+                            <span class=""w3-xlarge"">{totalAcceptable}</span><br>
+                            Iš viso pripažinti tinkami
+                        </div>
+                         <div class=""w3-quarter w3-section"">
+                            <span class=""w3-xlarge"">{totalStartedService}</span><br>
+                            Iš viso pradėjo tarnybą
                         </div>
                         <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">{hasToProvideData}</span><br>

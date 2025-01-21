@@ -2,6 +2,7 @@ using System.Data;
 using System.IO.Compression;
 using System.Text;
 using System.Text.Json;
+using HtmlAgilityPack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -113,14 +114,141 @@ namespace draft_data
 
             _logger.LogInformation("stored new dataset");
 
+            int totalAcceptable = 0;
+            int totalStartedService = 0;
 
-            await UpdatePageFile(newSet);
+            try
+            {
+                totalAcceptable = GetTotalAcceptableCount();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read totalAcceptable");
+            }
+
+
+            try
+            {
+                totalStartedService = GetTotalStartedService();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read totalStartedService");
+            }
+
+
+            await UpdatePageFile(newSet, totalAcceptable, totalStartedService);
 
             _logger.LogInformation("updated page file");
 
 
             // ----------------------------------------
             _logger.LogInformation($"finishing {nameof(DailyDataRefresher)}.{nameof(Execute)} ...");
+        }
+
+        private int GetTotalStartedService()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var doc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // Find the table with the header "IŠ VISO"
+            var table = doc.DocumentNode.SelectSingleNode("//table[caption/h3[text()='IŠ VISO']]");
+
+            if (table != null)
+            {
+                // Find the index of the "IŠ VISO pripažinti tinkami" column
+                var headerCells = table.SelectNodes(".//tr[1]/td");
+
+                // Find the index of the "IŠ VISO pradėjo tarnybą" column
+                int indexPradejoTarnyba = headerCells
+                    .Select((cell, index) => new { Cell = cell, Index = index })
+                    .Where(x => x.Cell.InnerText.Trim() == "IŠ VISO pradėjo tarnybą")
+                    .Select(x => x.Index)
+                    .FirstOrDefault();
+
+                if (indexPradejoTarnyba >= 0)
+                {
+                    // Find the value in the second row for both columns
+                    var rows = table.SelectNodes(".//tr[position() > 1]");
+                    var valuePradejoTarnyba = rows[0].SelectNodes("td")[indexPradejoTarnyba]?.InnerText.Trim();
+
+                    _logger.LogInformation($"IŠ VISO pradėjo tarnybą: {valuePradejoTarnyba}");
+
+                    if (valuePradejoTarnyba == null || valuePradejoTarnyba == string.Empty || string.IsNullOrWhiteSpace(valuePradejoTarnyba))
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return int.Parse(valuePradejoTarnyba);
+
+                    }
+                }
+                else
+                {
+                    _logger.LogWarning("One or both target columns not found.");
+                }
+            }
+            else
+            {
+                _logger.LogWarning("Table with header 'IŠ VISO' not found.");
+            }
+
+
+            return 0;
+
+        }
+
+        private int GetTotalAcceptableCount()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var doc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // Find the table with the header "IŠ VISO"
+            var table = doc.DocumentNode.SelectSingleNode("//table[caption/h3[text()='IŠ VISO']]");
+
+            if (table != null)
+            {
+                // Find the index of the "IŠ VISO pripažinti tinkami" column
+                var headerCells = table.SelectNodes(".//tr[1]/td");
+                int indexPripazintiTinkami = headerCells
+                    .Select((cell, index) => new { Cell = cell, Index = index })
+                    .Where(x => x.Cell.InnerText.Trim() == "IŠ VISO pripažinti tinkami")
+                    .Select(x => x.Index)
+                    .FirstOrDefault();
+
+
+                if (indexPripazintiTinkami >= 0)
+                {
+                    // Find the value in the second row for both columns
+                    var rows = table.SelectNodes(".//tr[position() > 1]");
+                    var valuePripazintiTinkami = rows[0].SelectNodes("td")[indexPripazintiTinkami]?.InnerText.Trim();
+
+                    _logger.LogInformation($"IŠ VISO pripažinti tinkami: {valuePripazintiTinkami}");
+
+                    if (valuePripazintiTinkami == null || valuePripazintiTinkami == string.Empty || string.IsNullOrWhiteSpace(valuePripazintiTinkami))
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return int.Parse(valuePripazintiTinkami);
+                    }
+                }
+                else
+                {
+                    _logger.LogWarning("One or both target columns not found.");
+                }
+            }
+            else
+            {
+                _logger.LogWarning("Table with header 'IŠ VISO' not found.");
+            }
+
+            return 0;
+
         }
 
         private async Task<string> GetDataFromAPI(int region, string range)
@@ -198,7 +326,7 @@ namespace draft_data
 
         }
 
-        private async Task UpdatePageFile(DataSet dataSet)
+        private async Task UpdatePageFile(DataSet dataSet, int totalAcceptable, int totalStartedService)
         {
 
             Random r = new Random();
@@ -269,6 +397,8 @@ namespace draft_data
 
 
             string fileContent = DomainConstants.GetPage(
+                totalAcceptable: totalAcceptable,
+                totalStartedService: totalStartedService,
                 hasToProvideData: hasToProvideData,
                 hasToProvideDataUntilExact: hasToProvideDataUntilExact,
                 draftProcedureInProgress: draftProcedureInProgress,
