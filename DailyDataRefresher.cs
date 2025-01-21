@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Quartz;
+using Serilog;
 
 namespace draft_data
 {
@@ -228,7 +229,43 @@ namespace draft_data
             int hasToAttendMedicalScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
             int hasToAttendAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
             int hasToProvideAddtionalInfoAfterAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inService = lastDataSet.Draftees.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
             int draftHasBeenPostponed = lastDataSet.Draftees.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+
+            int sumOfMetrics = hasToProvideData +
+             hasToProvideDataUntilExact +
+              draftProcedureInProgress +
+               isAsignedAndNeedsToArrive +
+                quicklyHasToContactAndArrive +
+                hasToAttendMedicalScreening +
+                 hasToAttendAdditionalMedScreening +
+                  hasToProvideAddtionalInfoAfterAdditionalMedScreening +
+                  draftHasBeenPostponed + inService;
+
+
+            _logger.LogInformation("DataSet.Draftees.Count: {DrafteesCount}", lastDataSet.Draftees.Count);
+            _logger.LogInformation("hasToProvideData: {HasToProvideData}", hasToProvideData);
+            _logger.LogInformation("hasToProvideDataUntilExact: {HasToProvideDataUntilExact}", hasToProvideDataUntilExact);
+            _logger.LogInformation("draftProcedureInProgress: {DraftProcedureInProgress}", draftProcedureInProgress);
+            _logger.LogInformation("isAsignedAndNeedsToArrive: {IsAsignedAndNeedsToArrive}", isAsignedAndNeedsToArrive);
+            _logger.LogInformation("quicklyHasToContactAndArrive: {QuicklyHasToContactAndArrive}", quicklyHasToContactAndArrive);
+            _logger.LogInformation("hasToAttendMedicalScreening: {HasToAttendMedicalScreening}", hasToAttendMedicalScreening);
+            _logger.LogInformation("hasToAttendAdditionalMedScreening: {HasToAttendAdditionalMedScreening}", hasToAttendAdditionalMedScreening);
+            _logger.LogInformation("hasToProvideAddtionalInfoAfterAdditionalMedScreening: {HasToProvideAddtionalInfoAfterAdditionalMedScreening}", hasToProvideAddtionalInfoAfterAdditionalMedScreening);
+            _logger.LogInformation("inService: {InService}", inService);
+            _logger.LogInformation("draftHasBeenPostponed: {DraftHasBeenPostponed}", draftHasBeenPostponed);
+
+
+            if (lastDataSet.Draftees.Count != sumOfMetrics)
+            {
+                _logger.LogError("sum of metrics does not match, total draftees: {lastDataSetDrafteesCount}, sum of metrics: {sumOfMetrics}", lastDataSet.Draftees.Count, sumOfMetrics);
+            }
+            else
+            {
+                _logger.LogInformation
+                            ("sum of metrics: {sumOfMetrics}", sumOfMetrics);
+
+            }
 
 
             string fileContent = DomainConstants.GetPage(
@@ -239,7 +276,8 @@ namespace draft_data
                 quicklyHasToContactAndArrive: quicklyHasToContactAndArrive,
                 hasToAttendMedicalScreening: hasToAttendMedicalScreening,
                 hasToAttendAdditionalMedScreening: hasToAttendAdditionalMedScreening,
-                hasToProvideAddtionalInfoAfterAdditionalMedScreening: hasToAttendMedicalScreening,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreening: hasToProvideAddtionalInfoAfterAdditionalMedScreening,
+                inService: inService,
                 draftHasBeenPostponed: draftHasBeenPostponed,
                 updatedOn: DateTime.Now - TimeSpan.FromMinutes(randomMinutes));
 
