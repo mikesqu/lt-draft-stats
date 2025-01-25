@@ -359,6 +359,7 @@ namespace draft_data
             int hasToProvideAddtionalInfoAfterAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
             int inService = lastDataSet.Draftees.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
             int draftHasBeenPostponed = lastDataSet.Draftees.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraft = lastDataSet.Draftees.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count();
 
             int sumOfMetrics = hasToProvideData +
              hasToProvideDataUntilExact +
@@ -368,7 +369,7 @@ namespace draft_data
                 hasToAttendMedicalScreening +
                  hasToAttendAdditionalMedScreening +
                   hasToProvideAddtionalInfoAfterAdditionalMedScreening +
-                  draftHasBeenPostponed + inService;
+                  draftHasBeenPostponed + inService + removedFromDraft;
 
 
             _logger.LogInformation("DataSet.Draftees.Count: {DrafteesCount}", lastDataSet.Draftees.Count);
@@ -382,6 +383,7 @@ namespace draft_data
             _logger.LogInformation("hasToProvideAddtionalInfoAfterAdditionalMedScreening: {HasToProvideAddtionalInfoAfterAdditionalMedScreening}", hasToProvideAddtionalInfoAfterAdditionalMedScreening);
             _logger.LogInformation("inService: {InService}", inService);
             _logger.LogInformation("draftHasBeenPostponed: {DraftHasBeenPostponed}", draftHasBeenPostponed);
+            _logger.LogInformation("removedFromDraft: {removedFromDraft}", removedFromDraft);
 
 
             if (lastDataSet.Draftees.Count != sumOfMetrics)
@@ -409,7 +411,8 @@ namespace draft_data
                 hasToProvideAddtionalInfoAfterAdditionalMedScreening: hasToProvideAddtionalInfoAfterAdditionalMedScreening,
                 inService: inService,
                 draftHasBeenPostponed: draftHasBeenPostponed,
-                updatedOn: DateTime.Now - TimeSpan.FromMinutes(randomMinutes));
+                updatedOn: DateTime.Now - TimeSpan.FromMinutes(randomMinutes),
+                removedFromDraft: removedFromDraft);
 
 
             string appDataDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);

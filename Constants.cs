@@ -24,7 +24,8 @@ namespace draft_data
             DateTime updatedOn,
             int inService,
             int totalAcceptable,
-            int totalStartedService)
+            int totalStartedService,
+            int removedFromDraft)
         {
             // string prevStateColorCode;
             // if (prevState == "Online")
@@ -87,7 +88,11 @@ namespace draft_data
                             <span class=""w3-xlarge"">25149</span><br>
                             Viso pašaukta
                         </div>
-                         <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section"">
+                            <span class=""w3-xlarge"">3865</span><br>
+                            2025 m. šaukimo planas
+                        </div>
+                        <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">{totalAcceptable}</span><br>
                             Iš viso pripažinti tinkami
                         </div>
@@ -134,6 +139,10 @@ namespace draft_data
                         <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">{draftHasBeenPostponed}</span><br>
                             Privalomoji karo tarnyba atidėta
+                        </div>
+                        <div class=""w3-quarter w3-section"">
+                            <span class=""w3-xlarge"">{removedFromDraft}</span><br>
+                            išbraukti iš karinės įskaitos
                         </div>
                     </div>
 
