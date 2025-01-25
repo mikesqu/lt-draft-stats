@@ -61,7 +61,7 @@ namespace draft_data
                 <html>
                 <head>
                     <meta http-equiv=""content-type"" content=""text/html; charset=UTF-8"">
-                    <title>2025 šauktinių informacija</title>
+                    <title>2025 šauktinių statistika</title>
                     <meta charset=""UTF-8"">
                     <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
                     <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/w3.css"">
@@ -80,7 +80,7 @@ namespace draft_data
                 <body class=""w3-black"">
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
-                        <h3>2025 metų šauktiniu sąrašo informacija: </h3>
+                        <h3>2025 metų šauktiniu sąrašo statistika: </h3>
                     </div>
                     
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">

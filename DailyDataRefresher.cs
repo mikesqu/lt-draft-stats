@@ -423,7 +423,7 @@ namespace draft_data
                 await writer.WriteAsync(fileContent);
             }
 
-            _logger.LogInformation($"File created/updated at: DailyDataRefresher.cs");
+            _logger.LogInformation("File created/updated at: {filePath}", filePath);
 
         }
 
