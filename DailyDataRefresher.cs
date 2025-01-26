@@ -674,6 +674,121 @@ namespace draft_data
 
             }
 
+            IList<Draftee> vilniusDataSet = lastDataSet.Draftees.Where(d => d.Region == "6").ToList();
+
+            IList<Draftee> sect1 = vilniusDataSet.Take(new Range(0, 1257)).ToList();
+            IList<Draftee> sect2 = vilniusDataSet.Take(new Range(1257, 2514)).ToList();
+            IList<Draftee> sect3 = vilniusDataSet.Take(new Range(2514, 3771)).ToList();
+            IList<Draftee> sect4 = vilniusDataSet.Take(new Range(3771, 5028)).ToList();
+            IList<Draftee> sect5 = vilniusDataSet.Take(new Range(5028, 6285)).ToList();
+            IList<Draftee> sect6 = vilniusDataSet.Take(new Range(6285, 7546)).ToList();
+
+
+
+
+            int hasToProvideDataReg1s1 = sect1.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count(); ;
+            int hasToProvideDataUntilExactReg1s1 = sect1.Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+                    && d.Info.Contains("iki")
+                    && d.Info.Contains("2025"))
+                 .Count(); ;
+            int draftProcedureInProgressReg1s1 = sect1.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+            int isAsignedAndNeedsToArriveReg1s1 = sect1.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+            int quicklyHasToContactAndArriveReg1s1 = sect1.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+            int hasToAttendMedicalScreeningReg1s1 = sect1.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+            int hasToAttendAdditionalMedScreeningReg1s1 = sect1.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s1 = sect1.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inServiceReg1s1 = sect1.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+            int draftHasBeenPostponedReg1s1 = sect1.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraftReg1s1 = sect1.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); ;
+
+
+
+            int hasToProvideDataReg1s2 = sect2.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count(); ;
+            int hasToProvideDataUntilExactReg1s2 = sect2.Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+                    && d.Info.Contains("iki")
+                    && d.Info.Contains("2025"))
+                 .Count(); ;
+            int draftProcedureInProgressReg1s2 = sect2.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+            int isAsignedAndNeedsToArriveReg1s2 = sect2.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+            int quicklyHasToContactAndArriveReg1s2 = sect2.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+            int hasToAttendMedicalScreeningReg1s2 = sect2.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+            int hasToAttendAdditionalMedScreeningReg1s2 = sect2.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s2 = sect2.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inServiceReg1s2 = sect2.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+            int draftHasBeenPostponedReg1s2 = sect2.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraftReg1s2 = sect2.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); ;
+
+
+
+            int hasToProvideDataReg1s3 = sect3.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count(); ;
+            int hasToProvideDataUntilExactReg1s3 = sect3.Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+                    && d.Info.Contains("iki")
+                    && d.Info.Contains("2025"))
+                 .Count(); ;
+            int draftProcedureInProgressReg1s3 = sect3.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+            int isAsignedAndNeedsToArriveReg1s3 = sect3.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+            int quicklyHasToContactAndArriveReg1s3 = sect3.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+            int hasToAttendMedicalScreeningReg1s3 = sect3.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+            int hasToAttendAdditionalMedScreeningReg1s3 = sect3.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s3 = sect3.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inServiceReg1s3 = sect3.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+            int draftHasBeenPostponedReg1s3 = sect3.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraftReg1s3 = sect3.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); ;
+
+
+
+            int hasToProvideDataReg1s4 = sect4.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count(); ;
+            int hasToProvideDataUntilExactReg1s4 = sect4.Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+                    && d.Info.Contains("iki")
+                    && d.Info.Contains("2025"))
+                 .Count(); ;
+            int draftProcedureInProgressReg1s4 = sect4.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+            int isAsignedAndNeedsToArriveReg1s4 = sect4.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+            int quicklyHasToContactAndArriveReg1s4 = sect4.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+            int hasToAttendMedicalScreeningReg1s4 = sect4.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+            int hasToAttendAdditionalMedScreeningReg1s4 = sect4.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s4 = sect4.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inServiceReg1s4 = sect4.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+            int draftHasBeenPostponedReg1s4 = sect4.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraftReg1s4 = sect4.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); ;
+
+
+
+            int hasToProvideDataReg1s5 = sect5.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count(); ;
+            int hasToProvideDataUntilExactReg1s5 = sect5.Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+                    && d.Info.Contains("iki")
+                    && d.Info.Contains("2025"))
+                 .Count(); ;
+            int draftProcedureInProgressReg1s5 = sect5.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+            int isAsignedAndNeedsToArriveReg1s5 = sect5.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+            int quicklyHasToContactAndArriveReg1s5 = sect5.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+            int hasToAttendMedicalScreeningReg1s5 = sect5.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+            int hasToAttendAdditionalMedScreeningReg1s5 = sect5.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s5 = sect5.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inServiceReg1s5 = sect5.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+            int draftHasBeenPostponedReg1s5 = sect5.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraftReg1s5 = sect5.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); ;
+
+
+
+
+            int hasToProvideDataReg1s6 = sect6.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count(); ;
+            int hasToProvideDataUntilExactReg1s6 = sect6.Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+                    && d.Info.Contains("iki")
+                    && d.Info.Contains("2025"))
+                 .Count(); ;
+            int draftProcedureInProgressReg1s6 = sect6.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+            int isAsignedAndNeedsToArriveReg1s6 = sect6.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+            int quicklyHasToContactAndArriveReg1s6 = sect6.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+            int hasToAttendMedicalScreeningReg1s6 = sect6.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+            int hasToAttendAdditionalMedScreeningReg1s6 = sect6.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s6 = sect6.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+            int inServiceReg1s6 = sect6.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+            int draftHasBeenPostponedReg1s6 = sect6.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+            int removedFromDraftReg1s6 = sect6.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); ;
+
+
+
             string fileContent = DomainConstants.GetPage(
                 totalAcceptable: totalAcceptable,
                 totalStartedService: totalStartedService,
@@ -700,7 +815,74 @@ namespace draft_data
                 reg3Potential: reg3Potential,
                 reg4Potential: reg4Potential,
                 reg5Potential: reg5Potential,
-                reg6Potential: reg6Potential);
+                reg6Potential: reg6Potential,
+                hasToProvideDataReg1s1: hasToProvideDataReg1s1,
+                hasToProvideDataUntilExactReg1s1: hasToProvideDataUntilExactReg1s1,
+                draftProcedureInProgressReg1s1: draftProcedureInProgressReg1s1,
+                isAsignedAndNeedsToArriveReg1s1: isAsignedAndNeedsToArriveReg1s1,
+                quicklyHasToContactAndArriveReg1s1: quicklyHasToContactAndArriveReg1s1,
+                hasToAttendMedicalScreeningReg1s1: hasToAttendMedicalScreeningReg1s1,
+                hasToAttendAdditionalMedScreeningReg1s1: hasToAttendAdditionalMedScreeningReg1s1,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s1: hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s1,
+                inServiceReg1s1: inServiceReg1s1,
+                draftHasBeenPostponedReg1s1: draftHasBeenPostponedReg1s1,
+                removedFromDraftReg1s1: removedFromDraftReg1s1,
+                hasToProvideDataReg1s2: hasToProvideDataReg1s2,
+                hasToProvideDataUntilExactReg1s2: hasToProvideDataUntilExactReg1s2,
+                draftProcedureInProgressReg1s2: draftProcedureInProgressReg1s2,
+                isAsignedAndNeedsToArriveReg1s2: isAsignedAndNeedsToArriveReg1s2,
+                quicklyHasToContactAndArriveReg1s2: quicklyHasToContactAndArriveReg1s2,
+                hasToAttendMedicalScreeningReg1s2: hasToAttendMedicalScreeningReg1s2,
+                hasToAttendAdditionalMedScreeningReg1s2: hasToAttendAdditionalMedScreeningReg1s2,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s2: hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s2,
+                inServiceReg1s2: inServiceReg1s2,
+                draftHasBeenPostponedReg1s2: draftHasBeenPostponedReg1s2,
+                removedFromDraftReg1s2: removedFromDraftReg1s2,
+                hasToProvideDataReg1s3: hasToProvideDataReg1s3,
+                hasToProvideDataUntilExactReg1s3: hasToProvideDataUntilExactReg1s3,
+                draftProcedureInProgressReg1s3: draftProcedureInProgressReg1s3,
+                isAsignedAndNeedsToArriveReg1s3: isAsignedAndNeedsToArriveReg1s3,
+                quicklyHasToContactAndArriveReg1s3: quicklyHasToContactAndArriveReg1s3,
+                hasToAttendMedicalScreeningReg1s3: hasToAttendMedicalScreeningReg1s3,
+                hasToAttendAdditionalMedScreeningReg1s3: hasToAttendAdditionalMedScreeningReg1s3,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s3: hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s3,
+                inServiceReg1s3: inServiceReg1s3,
+                draftHasBeenPostponedReg1s3: draftHasBeenPostponedReg1s3,
+                removedFromDraftReg1s3: removedFromDraftReg1s3,
+                hasToProvideDataReg1s4: hasToProvideDataReg1s4,
+                hasToProvideDataUntilExactReg1s4: hasToProvideDataUntilExactReg1s4,
+                draftProcedureInProgressReg1s4: draftProcedureInProgressReg1s4,
+                isAsignedAndNeedsToArriveReg1s4: isAsignedAndNeedsToArriveReg1s4,
+                quicklyHasToContactAndArriveReg1s4: quicklyHasToContactAndArriveReg1s4,
+                hasToAttendMedicalScreeningReg1s4: hasToAttendMedicalScreeningReg1s4,
+                hasToAttendAdditionalMedScreeningReg1s4: hasToAttendAdditionalMedScreeningReg1s4,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s4: hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s4,
+                inServiceReg1s4: inServiceReg1s4,
+                draftHasBeenPostponedReg1s4: draftHasBeenPostponedReg1s4,
+                removedFromDraftReg1s4: removedFromDraftReg1s4,
+                hasToProvideDataReg1s5: hasToProvideDataReg1s5,
+                hasToProvideDataUntilExactReg1s5: hasToProvideDataUntilExactReg1s5,
+                draftProcedureInProgressReg1s5: draftProcedureInProgressReg1s5,
+                isAsignedAndNeedsToArriveReg1s5: isAsignedAndNeedsToArriveReg1s5,
+                quicklyHasToContactAndArriveReg1s5: quicklyHasToContactAndArriveReg1s5,
+                hasToAttendMedicalScreeningReg1s5: hasToAttendMedicalScreeningReg1s5,
+                hasToAttendAdditionalMedScreeningReg1s5: hasToAttendAdditionalMedScreeningReg1s5,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s5: hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s5,
+                inServiceReg1s5: inServiceReg1s5,
+                draftHasBeenPostponedReg1s5: draftHasBeenPostponedReg1s5,
+                removedFromDraftReg1s5: removedFromDraftReg1s5,
+                hasToProvideDataReg1s6: hasToProvideDataReg1s6,
+                hasToProvideDataUntilExactReg1s6: hasToProvideDataUntilExactReg1s6,
+                draftProcedureInProgressReg1s6: draftProcedureInProgressReg1s6,
+                isAsignedAndNeedsToArriveReg1s6: isAsignedAndNeedsToArriveReg1s6,
+                quicklyHasToContactAndArriveReg1s6: quicklyHasToContactAndArriveReg1s6,
+                hasToAttendMedicalScreeningReg1s6: hasToAttendMedicalScreeningReg1s6,
+                hasToAttendAdditionalMedScreeningReg1s6: hasToAttendAdditionalMedScreeningReg1s6,
+                hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s6: hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s6,
+                inServiceReg1s6: inServiceReg1s6,
+                draftHasBeenPostponedReg1s6: draftHasBeenPostponedReg1s6,
+                removedFromDraftReg1s6: removedFromDraftReg1s6
+                );
 
             string appDataDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string filePath = Path.Combine(appDataDir, "draft-content-root/draft-page.html");

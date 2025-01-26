@@ -37,7 +37,73 @@ namespace draft_data
             int reg3Potential,
             int reg4Potential,
             int reg5Potential,
-            int reg6Potential)
+            int reg6Potential,
+            int hasToProvideDataReg1s1,
+            int hasToProvideDataUntilExactReg1s1,
+            int draftProcedureInProgressReg1s1,
+            int isAsignedAndNeedsToArriveReg1s1,
+            int quicklyHasToContactAndArriveReg1s1,
+            int hasToAttendMedicalScreeningReg1s1,
+            int hasToAttendAdditionalMedScreeningReg1s1,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s1,
+            int inServiceReg1s1,
+            int draftHasBeenPostponedReg1s1,
+            int removedFromDraftReg1s1,
+            int hasToProvideDataReg1s2,
+            int hasToProvideDataUntilExactReg1s2,
+            int draftProcedureInProgressReg1s2,
+            int isAsignedAndNeedsToArriveReg1s2,
+            int quicklyHasToContactAndArriveReg1s2,
+            int hasToAttendMedicalScreeningReg1s2,
+            int hasToAttendAdditionalMedScreeningReg1s2,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s2,
+            int inServiceReg1s2,
+            int draftHasBeenPostponedReg1s2,
+            int removedFromDraftReg1s2,
+            int hasToProvideDataReg1s3,
+            int hasToProvideDataUntilExactReg1s3,
+            int draftProcedureInProgressReg1s3,
+            int isAsignedAndNeedsToArriveReg1s3,
+            int quicklyHasToContactAndArriveReg1s3,
+            int hasToAttendMedicalScreeningReg1s3,
+            int hasToAttendAdditionalMedScreeningReg1s3,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s3,
+            int inServiceReg1s3,
+            int draftHasBeenPostponedReg1s3,
+            int removedFromDraftReg1s3,
+            int hasToProvideDataReg1s4,
+            int hasToProvideDataUntilExactReg1s4,
+            int draftProcedureInProgressReg1s4,
+            int isAsignedAndNeedsToArriveReg1s4,
+            int quicklyHasToContactAndArriveReg1s4,
+            int hasToAttendMedicalScreeningReg1s4,
+            int hasToAttendAdditionalMedScreeningReg1s4,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s4,
+            int inServiceReg1s4,
+            int draftHasBeenPostponedReg1s4,
+            int removedFromDraftReg1s4,
+            int hasToProvideDataReg1s5,
+            int hasToProvideDataUntilExactReg1s5,
+            int draftProcedureInProgressReg1s5,
+            int isAsignedAndNeedsToArriveReg1s5,
+            int quicklyHasToContactAndArriveReg1s5,
+            int hasToAttendMedicalScreeningReg1s5,
+            int hasToAttendAdditionalMedScreeningReg1s5,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s5,
+            int inServiceReg1s5,
+            int draftHasBeenPostponedReg1s5,
+            int removedFromDraftReg1s5,
+            int hasToProvideDataReg1s6,
+            int hasToProvideDataUntilExactReg1s6,
+            int draftProcedureInProgressReg1s6,
+            int isAsignedAndNeedsToArriveReg1s6,
+            int quicklyHasToContactAndArriveReg1s6,
+            int hasToAttendMedicalScreeningReg1s6,
+            int hasToAttendAdditionalMedScreeningReg1s6,
+            int hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s6,
+            int inServiceReg1s6,
+            int draftHasBeenPostponedReg1s6,
+            int removedFromDraftReg1s6)
         {
 
             int reg1Perc = (int)(((double)reg1Acceptable / 338) * 100);
@@ -73,11 +139,11 @@ namespace draft_data
                 <body class=""w3-black"">
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
-                        <h3>2025 metų šauktiniu sąrašo statistika: </h3>
+                        <h3>2025 metų šauktinių sąrašo statistika: </h3>
                     </div>
 
                     <div>
-                        <p> Informacija atnaujinta: {updatedOn.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture)} </p>
+                        <p> Statistika paskutinį kartą skaičiuota: {updatedOn.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture)} </p>
                     </div>
                     
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
@@ -143,43 +209,43 @@ namespace draft_data
                         </div>
                         <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">{removedFromDraft}</span><br>
-                            išbraukti iš karinės įskaitos
+                            Išbraukti iš karinės įskaitos
                         </div>
                     </div>
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
 
-                        <h5>Eiliškumas pagal planą</h5>
+                        <h5>Šaukimo eiga pagal regionus</h5>
                         <div class=""simple-bar-chart"">
 
                             <div class=""item"" style=""--clr: #5EB344; --val: {reg1Perc}"">
                                 <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg1Acceptable} / 338</div>
+                                <div class=""value"">{reg1Acceptable} / 338 | trūksta: {338 - reg1Acceptable} </div>
                             </div>
 
                             <div class=""item"" style=""--clr: #FCB72A; --val: {reg2Perc}"">
                                 <div class=""label"">Kauno reg.</div>
-                                <div class=""value"">{reg2Acceptable} / 879</div>
+                                <div class=""value"">{reg2Acceptable} / 879 | trūksta: {879 - reg2Acceptable}</div>
                             </div>
 
                             <div class=""item"" style=""--clr: #F8821A; --val: {reg3Perc}"">
                                 <div class=""label"">Klaipėdos reg.</div>
-                                <div class=""value"">{reg3Acceptable} / 658</div>
+                                <div class=""value"">{reg3Acceptable} / 658 | trūksta: {658 - reg3Acceptable}</div>
                             </div>
 
                             <div class=""item"" style=""--clr: #E0393E; --val: {reg4Perc}"">
                                 <div class=""label"">Panevėžio reg.</div>
-                                <div class=""value"">{reg4Acceptable} / 355</div>
+                                <div class=""value"">{reg4Acceptable} / 355 | trūksta: {355 - reg4Acceptable}</div>
                             </div>
 
                             <div class=""item"" style=""--clr: #E0393E; --val: {reg5Perc}"">
                                 <div class=""label"">Šiaulių reg.</div>
-                                <div class=""value"">{reg5Acceptable} / 490</div>
+                                <div class=""value"">{reg5Acceptable} / 490 | trūksta: {490 - reg5Acceptable}</div>
                             </div>
 
                             <div class=""item"" style=""--clr: #963D97; --val: {reg6Perc}"">
                                 <div class=""label"">Vilniaus reg.</div>
-                                <div class=""value"">{reg6Acceptable} / 1145</div>
+                                <div class=""value"">{reg6Acceptable} / 1145 | trūksta: {1145 - reg6Acceptable}</div>
                             </div>
                         </div>
 
@@ -191,32 +257,133 @@ namespace draft_data
                                 <div class=""value"">{reg1Acceptable} / {reg1Potential})</div>
                             </div>
 
-                            <div class=""item"" style=""--clr: #FCB72A; --val: {reg2PercPot}"">
-                                <div class=""label"">Kauno reg.</div>
-                                <div class=""value"">{reg2Acceptable} / {reg2Potential}</div>
+                             <div class=""item"" style=""--clr: #FCB72A; --val: {reg2PercPot}"">
+                                <div class=""label"">Alytaus reg.</div>
+                                <div class=""value"">{reg2Acceptable} / {reg2Potential})</div>
+                            </div>
+                             <div class=""item"" style=""--clr: #F8821A; --val: {reg3PercPot}"">
+                                <div class=""label"">Alytaus reg.</div>
+                                <div class=""value"">{reg3Acceptable} / {reg3Potential})</div>
+                            </div>
+                             <div class=""item"" style=""--clr: #E0393E; --val: {reg4PercPot}"">
+                                <div class=""label"">Alytaus reg.</div>
+                                <div class=""value"">{reg4Acceptable} / {reg4Potential})</div>
+                            </div>
+                             <div class=""item"" style=""--clr: #E0393E; --val: {reg5PercPot}"">
+                                <div class=""label"">Alytaus reg.</div>
+                                <div class=""value"">{reg5Acceptable} / {reg5Potential})</div>
+                            </div>
+                             <div class=""item"" style=""--clr: #963D97; --val: {reg6PercPot}"">
+                                <div class=""label"">Alytaus reg.</div>
+                                <div class=""value"">{reg6Acceptable} / {reg6Potential})</div>
                             </div>
 
-                            <div class=""item"" style=""--clr: #F8821A; --val: {reg3PercPot}"">
-                                <div class=""label"">Klaipėdos reg.</div>
-                                <div class=""value"">{reg3Acceptable} / {reg3Potential}</div>
-                            </div>
-
-                            <div class=""item"" style=""--clr: #E0393E; --val: {reg4PercPot}"">
-                                <div class=""label"">Panevėžio reg.</div>
-                                <div class=""value"">{reg4Acceptable} / {reg4Potential}</div>
-                            </div>
-
-                            <div class=""item"" style=""--clr: #E0393E; --val: {reg5PercPot}"">
-                                <div class=""label"">Šiaulių reg.</div>
-                                <div class=""value"">{reg5Acceptable} / {reg5Potential}</div>
-                            </div>
-
-                            <div class=""item"" style=""--clr: #963D97; --val: {reg6PercPot}"">
-                                <div class=""label"">Vilniaus reg.</div>
-                                <div class=""value"">{reg6Acceptable} / {reg6Potential}</div>
-                            </div>
                         </div>
 
+                        <h4>Distribucija Vilniaus regione:</h4>
+                            <table id=""distrib-chart"" class=""charts-css column multiple stacked show-labels"">
+
+                                <tbody>
+                                    <tr>
+                                        <th scope=""row""> 0-1257 </th>
+                                        <td style=""--size: calc({hasToProvideDataReg1s1} / 1257);"">{hasToProvideDataReg1s1}</td>
+                                        <td style=""--size: calc({hasToProvideDataUntilExactReg1s1} / 1257);"">{hasToProvideDataUntilExactReg1s1}</td>
+                                        <td style=""--size: calc({draftProcedureInProgressReg1s1} / 1257);"">{draftProcedureInProgressReg1s1}</td>
+                                        <td style=""--size: calc({isAsignedAndNeedsToArriveReg1s1} / 1257);"">{isAsignedAndNeedsToArriveReg1s1}</td>
+                                        <td style=""--size: calc({quicklyHasToContactAndArriveReg1s1} / 1257);"">{quicklyHasToContactAndArriveReg1s1}</td>
+                                        <td style=""--size: calc({hasToAttendMedicalScreeningReg1s1} / 1257);"">{hasToAttendMedicalScreeningReg1s1}</td>
+                                        <td style=""--size: calc({hasToAttendAdditionalMedScreeningReg1s1} / 1257);"">{hasToAttendAdditionalMedScreeningReg1s1}</td>
+                                        <td style=""--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s1} / 1257);"">{hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s1}</td>
+                                        <td style=""--size: calc({inServiceReg1s1} / 1257);"">{inServiceReg1s1}</td>
+                                        <td style=""--size: calc({draftHasBeenPostponedReg1s1} / 1257);"">{draftHasBeenPostponedReg1s1}</td>
+                                        <td style=""--size: calc({removedFromDraftReg1s1} / 1257);"">{removedFromDraftReg1s1}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope=""row""> 1257-2514 </th>
+                                        <td style=""--size: calc({hasToProvideDataReg1s2} / 1257);"">{hasToProvideDataReg1s2}</td>
+                                        <td style=""--size: calc({hasToProvideDataUntilExactReg1s2} / 1257);"">{hasToProvideDataUntilExactReg1s2}</td>
+                                        <td style=""--size: calc({draftProcedureInProgressReg1s2} / 1257);"">{draftProcedureInProgressReg1s2}</td>
+                                        <td style=""--size: calc({isAsignedAndNeedsToArriveReg1s2} / 1257);"">{isAsignedAndNeedsToArriveReg1s2}</td>
+                                        <td style=""--size: calc({quicklyHasToContactAndArriveReg1s2} / 1257);"">{quicklyHasToContactAndArriveReg1s2}</td>
+                                        <td style=""--size: calc({hasToAttendMedicalScreeningReg1s2} / 1257);"">{hasToAttendMedicalScreeningReg1s2}</td>
+                                        <td style=""--size: calc({hasToAttendAdditionalMedScreeningReg1s2} / 1257);"">{hasToAttendAdditionalMedScreeningReg1s2}</td>
+                                        <td style=""--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s2} / 1257);"">{hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s2}</td>
+                                        <td style=""--size: calc({inServiceReg1s2} / 1257);"">{inServiceReg1s2}</td>
+                                        <td style=""--size: calc({draftHasBeenPostponedReg1s2} / 1257);"">{draftHasBeenPostponedReg1s2}</td>
+                                        <td style=""--size: calc({removedFromDraftReg1s2} / 1257);"">{removedFromDraftReg1s2}</td>            </tr>
+                                    <tr>
+                                        <th scope=""row""> 2514-3771 </th>
+                                        <td style=""--size: calc({hasToProvideDataReg1s3} / 1257);"">{hasToProvideDataReg1s3}</td>
+                                        <td style=""--size: calc({hasToProvideDataUntilExactReg1s3} / 1257);"">{hasToProvideDataUntilExactReg1s3}</td>
+                                        <td style=""--size: calc({draftProcedureInProgressReg1s3} / 1257);"">{draftProcedureInProgressReg1s3}</td>
+                                        <td style=""--size: calc({isAsignedAndNeedsToArriveReg1s3} / 1257);"">{isAsignedAndNeedsToArriveReg1s3}</td>
+                                        <td style=""--size: calc({quicklyHasToContactAndArriveReg1s3} / 1257);"">{quicklyHasToContactAndArriveReg1s3}</td>
+                                        <td style=""--size: calc({hasToAttendMedicalScreeningReg1s3} / 1257);"">{hasToAttendMedicalScreeningReg1s3}</td>
+                                        <td style=""--size: calc({hasToAttendAdditionalMedScreeningReg1s3} / 1257);"">{hasToAttendAdditionalMedScreeningReg1s3}</td>
+                                        <td style=""--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s3} / 1257);"">{hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s3}</td>
+                                        <td style=""--size: calc({inServiceReg1s3} / 1257);"">{inServiceReg1s3}</td>
+                                        <td style=""--size: calc({draftHasBeenPostponedReg1s3} / 1257);"">{draftHasBeenPostponedReg1s3}</td>
+                                        <td style=""--size: calc({removedFromDraftReg1s3} / 1257);"">{removedFromDraftReg1s3}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope=""row""> 3771-5028 </th>
+                                        <td style=""--size: calc({hasToProvideDataReg1s4} / 1257);"">{hasToProvideDataReg1s4}</td>
+                                        <td style=""--size: calc({hasToProvideDataUntilExactReg1s4} / 1257);"">{hasToProvideDataUntilExactReg1s4}</td>
+                                        <td style=""--size: calc({draftProcedureInProgressReg1s4} / 1257);"">{draftProcedureInProgressReg1s4}</td>
+                                        <td style=""--size: calc({isAsignedAndNeedsToArriveReg1s4} / 1257);"">{isAsignedAndNeedsToArriveReg1s4}</td>
+                                        <td style=""--size: calc({quicklyHasToContactAndArriveReg1s4} / 1257);"">{quicklyHasToContactAndArriveReg1s4}</td>
+                                        <td style=""--size: calc({hasToAttendMedicalScreeningReg1s4} / 1257);"">{hasToAttendMedicalScreeningReg1s4}</td>
+                                        <td style=""--size: calc({hasToAttendAdditionalMedScreeningReg1s4} / 1257);"">{hasToAttendAdditionalMedScreeningReg1s4}</td>
+                                        <td style=""--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s4} / 1257);"">{hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s4}</td>
+                                        <td style=""--size: calc({inServiceReg1s4} / 1257);"">{inServiceReg1s4}</td>
+                                        <td style=""--size: calc({draftHasBeenPostponedReg1s4} / 1257);"">{draftHasBeenPostponedReg1s4}</td>
+                                        <td style=""--size: calc({removedFromDraftReg1s4} / 1257);"">{removedFromDraftReg1s4}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope=""row""> 5028-6285 </th>
+                                        <td style=""--size: calc({hasToProvideDataReg1s5} / 1257);"">{hasToProvideDataReg1s5}</td>
+                                        <td style=""--size: calc({hasToProvideDataUntilExactReg1s5} / 1257);"">{hasToProvideDataUntilExactReg1s5}</td>
+                                        <td style=""--size: calc({draftProcedureInProgressReg1s5} / 1257);"">{draftProcedureInProgressReg1s5}</td>
+                                        <td style=""--size: calc({isAsignedAndNeedsToArriveReg1s5} / 1257);"">{isAsignedAndNeedsToArriveReg1s5}</td>
+                                        <td style=""--size: calc({quicklyHasToContactAndArriveReg1s5} / 1257);"">{quicklyHasToContactAndArriveReg1s5}</td>
+                                        <td style=""--size: calc({hasToAttendMedicalScreeningReg1s5} / 1257);"">{hasToAttendMedicalScreeningReg1s5}</td>
+                                        <td style=""--size: calc({hasToAttendAdditionalMedScreeningReg1s5} / 1257);"">{hasToAttendAdditionalMedScreeningReg1s5}</td>
+                                        <td style=""--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s5} / 190);"">{hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s5}</td>
+                                        <td style=""--size: calc({inServiceReg1s5} / 1257);"">{inServiceReg1s5}</td>
+                                        <td style=""--size: calc({draftHasBeenPostponedReg1s5} / 1257);"">{draftHasBeenPostponedReg1s5}</td>
+                                        <td style=""--size: calc({removedFromDraftReg1s5} / 1257);"">{removedFromDraftReg1s5}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope=""row""> 6285-7546 </th>
+                                        <td style=""--size: calc({hasToProvideDataReg1s6} / 1261);"">{hasToProvideDataReg1s6}</td>
+                                        <td style=""--size: calc({hasToProvideDataUntilExactReg1s6} / 1261);"">{hasToProvideDataUntilExactReg1s6}</td>
+                                        <td style=""--size: calc({draftProcedureInProgressReg1s6} / 1261);"">{draftProcedureInProgressReg1s6}</td>
+                                        <td style=""--size: calc({isAsignedAndNeedsToArriveReg1s6} / 1261);"">{isAsignedAndNeedsToArriveReg1s6}</td>
+                                        <td style=""--size: calc({quicklyHasToContactAndArriveReg1s6} / 1261);"">{quicklyHasToContactAndArriveReg1s6}</td>
+                                        <td style=""--size: calc({hasToAttendMedicalScreeningReg1s6} / 1261);"">{hasToAttendMedicalScreeningReg1s6}</td>
+                                        <td style=""--size: calc({hasToAttendAdditionalMedScreeningReg1s6} / 1261);"">{hasToAttendAdditionalMedScreeningReg1s6}</td>
+                                        <td style=""--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s6} / 1261);"">{hasToProvideAddtionalInfoAfterAdditionalMedScreeningReg1s6}</td>
+                                        <td style=""--size: calc({inServiceReg1s6} / 1261);"">{inServiceReg1s6}</td>
+                                        <td style=""--size: calc({draftHasBeenPostponedReg1s6} / 1261);"">{draftHasBeenPostponedReg1s6}</td>
+                                        <td style=""--size: calc({removedFromDraftReg1s6} / 1261);"">{removedFromDraftReg1s6}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <ul class=""charts-css legend legend-rectangle"" style=""margin-top: 6.5rem;"">
+                                <li> Privalo pateikti duomenis </li>
+                                <li> Privalo pateikti duomenis iki konkrečios datos </li>
+                                <li> Šaukimo proceduros vykdomos </li>
+                                <li> Privalo atvykti į nurodytą skyrių </li>
+                                <li> Privalo skubiai susiekti arba atvykti į nurodytą skyrių </li>
+                                <li> Privalo atvykti pasitikrinti sveikatos </li>
+                                <li> Privalo atvykti papildomai pasitikrinti sveikatos </li>
+                                <li> Privalo pateikti medicininius dokumentus po papildomo ištyrimo </li>
+                                <li> Atlieka tarnybą </li>
+                                <li> Privalomoji karo tarnyba atidėta </li>
+                                <li> Išbraukti iš karinės įskaitos </li>
+                            </ul>
                     </div>
 
                     

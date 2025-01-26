@@ -1,9 +1,14 @@
+@import url("https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css");
+
 .simple-bar-chart {
     --line-count: 10;
     --line-color: currentcolor;
     --line-opacity: 0.25;
     --item-gap: 2%;
     --item-default-color: #060606;
+
+    margin-bottom: 2.5rem;
+
 
     height: 10rem;
     display: grid;
@@ -78,7 +83,6 @@
 /* Demo styles */
 body {
     margin: 0;
-    padding: 2rem;
     color: #1D1E22;
     background-color: #f0f0f0;
     font-family: system-ui, sans-serif;
@@ -92,7 +96,107 @@ body {
     }
 }
 
-body>* {
-    max-width: 45rem;
-    margin-inline: auto;
+
+
+
+
+.charts-css.legend li:nth-child(11n+1)::before {
+    background-color: red;
+}
+
+.charts-css.legend li:nth-child(11n+2)::before {
+    background-color: green;
+}
+
+.charts-css.legend li:nth-child(11n+3)::before {
+    background-color: blue;
+}
+
+.charts-css.legend li:nth-child(11n+4)::before {
+    background-color: yellow;
+}
+
+.charts-css.legend li:nth-child(11n+5)::before {
+    background-color: purple;
+}
+
+.charts-css.legend li:nth-child(11n+6)::before {
+    background-color: navy;
+}
+
+.charts-css.legend li:nth-child(11n+7)::before {
+    background-color: steelblue;
+}
+
+.charts-css.legend li:nth-child(11n+8)::before {
+    background-color: brown;
+}
+
+.charts-css.legend li:nth-child(11n+9)::before {
+    background-color: grey;
+}
+
+.charts-css.legend li:nth-child(11n+10)::before {
+    background-color: turquoise;
+}
+
+.charts-css.legend li:nth-child(11n+11)::before {
+    background-color: white;
+}
+
+
+
+
+
+
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+1) {
+    background-color: red;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+2) {
+    background-color: green;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+3) {
+    background-color: blue;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+4) {
+    background-color: yellow;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+5) {
+    background-color: purple;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+6) {
+    background-color: navy;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+7) {
+    background-color: steelblue;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+8) {
+    background-color: brown;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+9) {
+    background-color: grey;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+10) {
+    background-color: turquoise;
+}
+
+.charts-css.column.multiple tbody tr td:nth-of-type(11n+11) {
+    background-color: white;
+}
+
+
+
+
+.charts-css.legend.legend-rectangle li {
+    padding: 0.8rem;
 }

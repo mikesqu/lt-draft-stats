@@ -6,7 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bar Chart with Charts.css</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css">
+
     <style>
+        /* #distrib-chat .column:not(.multiple) tbody tr:nth-of-type(11n + 11) td {
+            background-color: white;
+        } */
+
+        .charts-css.legend li:nth-child(11n+1)::before {
+            background-color: red;
+        }
+        .charts-css.legend li:nth-child(11n+2)::before {
+            background-color: green;
+        }
+        .charts-css.legend li:nth-child(11n+3)::before {
+            background-color: blue;
+        }
+        .charts-css.legend li:nth-child(11n+4)::before {
+            background-color: yellow;
+        }
+        .charts-css.legend li:nth-child(11n+5)::before {
+            background-color: purple;
+        }
+        .charts-css.legend li:nth-child(11n+6)::before {
+            background-color: navy;
+        }
+        .charts-css.legend li:nth-child(11n+7)::before {
+            background-color: steelblue;
+        }
+        .charts-css.legend li:nth-child(11n+8)::before {
+            background-color: brown;
+        }
+        .charts-css.legend li:nth-child(11n+9)::before {
+            background-color: grey;
+        }
+        .charts-css.legend li:nth-child(11n+10)::before {
+            background-color: turquoise;
+        }
+        .charts-css.legend li:nth-child(11n+11)::before {
+            background-color: white;
+        }
+
+
+        
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+1) {
+            background-color: red;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+2) {
+            background-color: green;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+3) {
+            background-color: blue;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+4) {
+            background-color: yellow;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+5) {
+            background-color: purple;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+6) {
+            background-color: navy;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+7) {
+            background-color: steelblue;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+8) {
+            background-color: brown;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+9) {
+            background-color: grey;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+10) {
+            background-color: turquoise;
+        }
+        .charts-css.column.multiple tbody tr td:nth-of-type(11n+11) {
+            background-color: white;
+        }
+
+
+        .charts-css.legend.legend-rectangle li {
+            padding: 0.8rem;
+        }
+
+
+        
+
         .simple-bar-chart {
             --line-count: 10;
             --line-color: currentcolor;
@@ -87,7 +170,6 @@
         /* Demo styles */
         body {
             margin: 0;
-            padding: 2rem;
             color: #1D1E22;
             background-color: #f0f0f0;
             font-family: system-ui, sans-serif;
@@ -100,49 +182,137 @@
                 color: #f0f0f0;
             }
         }
-
-        body>* {
-            max-width: 45rem;
-            margin-inline: auto;
-        }
     </style>
 </head>
 
 <body>
 
-    <h1>Eiliškumas</h1>
-    <div class="simple-bar-chart">
+    <!-- 
+    int hasToProvideData = lastDataSet.Draftees.Where(d => d.Info == "privalote susisiekti ir pateikti savo duomenis").Count();
+    int hasToProvideDataUntilExact = lastDataSet.Draftees
+        .Where(d => d.Info.Contains("privalote susisiekti ir pateikti savo duomenis")
+            && d.Info.Contains("iki")
+            && d.Info.Contains("2025"))
+         .Count();
 
-        <div class="item" style="--clr: #5EB344; --val: 80">
-            <div class="label">Alytaus reg.</div>
-            <div class="value">80%</div>
-        </div>
+    int draftProcedureInProgress = lastDataSet.Draftees.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
+    int isAsignedAndNeedsToArrive = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote atvykti į")).Count();
+    int quicklyHasToContactAndArrive = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
+    int hasToAttendMedicalScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
+    int hasToAttendAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
+    int hasToProvideAddtionalInfoAfterAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
 
-        <div class="item" style="--clr: #FCB72A; --val: 50">
-            <div class="label">Kauno reg.</div>
-            <div class="value">50%</div>
-        </div>
+    int inService = lastDataSet.Draftees.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
+    int draftHasBeenPostponed = lastDataSet.Draftees.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
+    int removedFromDraft = lastDataSet.Draftees.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count(); -->
 
-        <div class="item" style="--clr: #F8821A; --val: 100">
-            <div class="label">Klaipėdos reg.</div>
-            <div class="value">100%</div>
-        </div>
 
-        <div class="item" style="--clr: #E0393E; --val: 15">
-            <div class="label">Panevėžio reg.</div>
-            <div class="value">15%</div>
-        </div>
+    <h4>Distribucjos:</h4>
+    <table id="distrib-chart" class="charts-css column multiple stacked show-labels">
+        <caption> Vilniaus regionas</caption>
 
-        <div class="item" style="--clr: #E0393E; --val: 15">
-            <div class="label">Šiaulių reg.</div>
-            <div class="value">15%</div>
-        </div>
+        <tbody>
+            <tr>
+                <th scope="row"> 0-190 </th>
+                <td style="--size: calc({hasToProvideData} / 190);">{hasToProvideData}</td>
+                <td style="--size: calc({hasToProvideDataUntilExact} / 190);">{hasToProvideDataUntilExact}</td>
+                <td style="--size: calc({draftProcedureInProgress} / 190);">{draftProcedureInProgress}</td>
+                <td style="--size: calc({isAsignedAndNeedsToArrive} / 190);">{isAsignedAndNeedsToArrive}</td>
+                <td style="--size: calc({quicklyHasToContactAndArrive} / 190);">{quicklyHasToContactAndArrive}</td>
+                <td style="--size: calc({hasToAttendMedicalScreening} / 190);">{hasToAttendMedicalScreening}</td>
+                <td style="--size: calc({hasToAttendAdditionalMedScreening} / 190);">{hasToAttendAdditionalMedScreening}</td>
+                <td style="--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreening} / 190);">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</td>
+                <td style="--size: calc({inService} / 190);">{inService}</td>
+                <td style="--size: calc({draftHasBeenPostponed} / 190);">{draftHasBeenPostponed}</td>
+                <td style="--size: calc({removedFromDraft} / 190);">{removedFromDraft}</td>
+            </tr>
+            <tr>
+                <th scope="row"> 190-380 </th>
+                <td style="--size: calc({hasToProvideData} / 190);">{hasToProvideData}</td>
+                <td style="--size: calc({hasToProvideDataUntilExact} / 190);">{hasToProvideDataUntilExact}</td>
+                <td style="--size: calc({draftProcedureInProgress} / 190);">{draftProcedureInProgress}</td>
+                <td style="--size: calc({isAsignedAndNeedsToArrive} / 190);">{isAsignedAndNeedsToArrive}</td>
+                <td style="--size: calc({quicklyHasToContactAndArrive} / 190);">{quicklyHasToContactAndArrive}</td>
+                <td style="--size: calc({hasToAttendMedicalScreening} / 190);">{hasToAttendMedicalScreening}</td>
+                <td style="--size: calc({hasToAttendAdditionalMedScreening} / 190);">{hasToAttendAdditionalMedScreening}</td>
+                <td style="--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreening} / 190);">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</td>
+                <td style="--size: calc({inService} / 190);">{inService}</td>
+                <td style="--size: calc({draftHasBeenPostponed} / 190);">{draftHasBeenPostponed}</td>
+                <td style="--size: calc({removedFromDraft} / 190);">{removedFromDraft}</td>            </tr>
+            <tr>
+                <th scope="row"> 380-570 </th>
+                <td style="--size: calc({hasToProvideData} / 190);">{hasToProvideData}</td>
+                <td style="--size: calc({hasToProvideDataUntilExact} / 190);">{hasToProvideDataUntilExact}</td>
+                <td style="--size: calc({draftProcedureInProgress} / 190);">{draftProcedureInProgress}</td>
+                <td style="--size: calc({isAsignedAndNeedsToArrive} / 190);">{isAsignedAndNeedsToArrive}</td>
+                <td style="--size: calc({quicklyHasToContactAndArrive} / 190);">{quicklyHasToContactAndArrive}</td>
+                <td style="--size: calc({hasToAttendMedicalScreening} / 190);">{hasToAttendMedicalScreening}</td>
+                <td style="--size: calc({hasToAttendAdditionalMedScreening} / 190);">{hasToAttendAdditionalMedScreening}</td>
+                <td style="--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreening} / 190);">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</td>
+                <td style="--size: calc({inService} / 190);">{inService}</td>
+                <td style="--size: calc({draftHasBeenPostponed} / 190);">{draftHasBeenPostponed}</td>
+                <td style="--size: calc({removedFromDraft} / 190);">{removedFromDraft}</td>
 
-        <div class="item" style="--clr: #963D97; --val: 1">
-            <div class="label">Vilniaus reg.</div>
-            <div class="value">1%</div>
-        </div>
-    </div>
+            </tr>
+            <tr>
+                <th scope="row"> 570-760 </th>
+                <td style="--size: calc({hasToProvideData} / 190);">{hasToProvideData}</td>
+                <td style="--size: calc({hasToProvideDataUntilExact} / 190);">{hasToProvideDataUntilExact}</td>
+                <td style="--size: calc({draftProcedureInProgress} / 190);">{draftProcedureInProgress}</td>
+                <td style="--size: calc({isAsignedAndNeedsToArrive} / 190);">{isAsignedAndNeedsToArrive}</td>
+                <td style="--size: calc({quicklyHasToContactAndArrive} / 190);">{quicklyHasToContactAndArrive}</td>
+                <td style="--size: calc({hasToAttendMedicalScreening} / 190);">{hasToAttendMedicalScreening}</td>
+                <td style="--size: calc({hasToAttendAdditionalMedScreening} / 190);">{hasToAttendAdditionalMedScreening}</td>
+                <td style="--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreening} / 190);">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</td>
+                <td style="--size: calc({inService} / 190);">{inService}</td>
+                <td style="--size: calc({draftHasBeenPostponed} / 190);">{draftHasBeenPostponed}</td>
+                <td style="--size: calc({removedFromDraft} / 190);">{removedFromDraft}</td>
+            </tr>
+            <tr>
+                <th scope="row"> 760-950 </th>
+                <td style="--size: calc({hasToProvideData} / 190);">{hasToProvideData}</td>
+                <td style="--size: calc({hasToProvideDataUntilExact} / 190);">{hasToProvideDataUntilExact}</td>
+                <td style="--size: calc({draftProcedureInProgress} / 190);">{draftProcedureInProgress}</td>
+                <td style="--size: calc({isAsignedAndNeedsToArrive} / 190);">{isAsignedAndNeedsToArrive}</td>
+                <td style="--size: calc({quicklyHasToContactAndArrive} / 190);">{quicklyHasToContactAndArrive}</td>
+                <td style="--size: calc({hasToAttendMedicalScreening} / 190);">{hasToAttendMedicalScreening}</td>
+                <td style="--size: calc({hasToAttendAdditionalMedScreening} / 190);">{hasToAttendAdditionalMedScreening}</td>
+                <td style="--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreening} / 190);">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</td>
+                <td style="--size: calc({inService} / 190);">{inService}</td>
+                <td style="--size: calc({draftHasBeenPostponed} / 190);">{draftHasBeenPostponed}</td>
+                <td style="--size: calc({removedFromDraft} / 190);">{removedFromDraft}</td>
+            </tr>
+            <tr>
+                <th scope="row"> 950-1145 </th>
+                <td style="--size: calc({hasToProvideData} / 195);">{hasToProvideData}</td>
+                <td style="--size: calc({hasToProvideDataUntilExact} / 195);">{hasToProvideDataUntilExact}</td>
+                <td style="--size: calc({draftProcedureInProgress} / 195);">{draftProcedureInProgress}</td>
+                <td style="--size: calc({isAsignedAndNeedsToArrive} / 195);">{isAsignedAndNeedsToArrive}</td>
+                <td style="--size: calc({quicklyHasToContactAndArrive} / 195);">{quicklyHasToContactAndArrive}</td>
+                <td style="--size: calc({hasToAttendMedicalScreening} / 195);">{hasToAttendMedicalScreening}</td>
+                <td style="--size: calc({hasToAttendAdditionalMedScreening} / 195);">{hasToAttendAdditionalMedScreening}</td>
+                <td style="--size: calc({hasToProvideAddtionalInfoAfterAdditionalMedScreening} / 195);">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</td>
+                <td style="--size: calc({inService} / 195);">{inService}</td>
+                <td style="--size: calc({draftHasBeenPostponed} / 195);">{draftHasBeenPostponed}</td>
+                <td style="--size: calc({removedFromDraft} / 195);">{removedFromDraft}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul class="charts-css legend legend-rectangle" style="margin-top: 6.5rem;">
+        <li> Išbraukti iš karinės įskaitos </li>
+        <li> Privalomoji karo tarnyba atidėta </li>
+        <li> Atlieka tarnybą </li>
+        <li> Privalo pateikti medicininius dokumentus po papildomo ištyrimo </li>
+        <li> Privalo atvykti papildomai pasitikrinti sveikatos </li>
+        <li> Privalo atvykti pasitikrinti sveikatos </li>
+        <li> Privalo skubiai susiekti arba atvykti į nurodytą skyrių </li>
+        <li> Privalo atvykti į nurodytą skyrių </li>
+        <li> Šaukimo proceduros vykdomos </li>
+        <li> Privalo pateikti duomenis iki konkrečios datos </li>
+        <li> Privalo pateikti duomenis </li>
+    </ul>
+
 
 </body>
 
