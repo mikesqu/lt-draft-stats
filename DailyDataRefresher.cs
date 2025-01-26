@@ -117,6 +117,13 @@ namespace draft_data
             int totalAcceptable = 0;
             int totalStartedService = 0;
 
+            int reg1Acceptable = 0;
+            int reg2Acceptable = 0;
+            int reg3Acceptable = 0;
+            int reg4Acceptable = 0;
+            int reg5Acceptable = 0;
+            int reg6Acceptable = 0;
+
             try
             {
                 totalAcceptable = GetTotalAcceptableCount();
@@ -137,7 +144,71 @@ namespace draft_data
             }
 
 
-            await UpdatePageFile(newSet, totalAcceptable, totalStartedService);
+
+            try
+            {
+                reg1Acceptable = GetReg1Acceptable();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read reg1Acceptable");
+            }
+
+            try
+            {
+                reg2Acceptable = GetReg2Acceptable();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read reg2Acceptable");
+            }
+
+            try
+            {
+                reg3Acceptable = GetReg3Acceptable();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read reg3Acceptable");
+            }
+
+            try
+            {
+                reg4Acceptable = GetReg4Acceptable();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read reg4Acceptable");
+            }
+
+            try
+            {
+                reg5Acceptable = GetReg5Acceptable();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read reg5Acceptable");
+            }
+
+            try
+            {
+                reg6Acceptable = GetReg6Acceptable();
+            }
+            catch (Exception)
+            {
+                _logger.LogError("Failed to read reg6Acceptable");
+            }
+
+
+            await UpdatePageFile(newSet, totalAcceptable,
+                totalStartedService,
+                reg1Acceptable: reg1Acceptable,
+                reg2Acceptable: reg2Acceptable,
+                reg3Acceptable: reg3Acceptable,
+                reg4Acceptable: reg4Acceptable,
+                reg5Acceptable: reg5Acceptable,
+                reg6Acceptable: reg6Acceptable
+            );
 
             _logger.LogInformation("updated page file");
 
@@ -145,6 +216,157 @@ namespace draft_data
             // ----------------------------------------
             _logger.LogInformation($"finishing {nameof(DailyDataRefresher)}.{nameof(Execute)} ...");
         }
+
+        private int GetReg6Acceptable()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var htmlDoc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // XPath to find the Alytaus region row under the "PAGAL REGIONUS" table
+            string xpath = "//table[caption/h3[text()='PAGAL REGIONUS']]//h3[text()='Vilniaus regionas']/following::tr[2]/td[4]";
+
+            // Locate the desired node
+            var node = htmlDoc.DocumentNode.SelectSingleNode(xpath);
+
+            // Extract and display the value
+            if (node != null)
+            {
+                string alytausRegionTinkami = node.InnerText.Trim();
+                return int.Parse(alytausRegionTinkami);
+            }
+            else
+            {
+                _logger.LogWarning("Value not found for Vilniaus regionas.");
+            }
+            return 0;
+        }
+
+        private int GetReg5Acceptable()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var htmlDoc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // XPath to find the Alytaus region row under the "PAGAL REGIONUS" table
+            string xpath = "//table[caption/h3[text()='PAGAL REGIONUS']]//h3[text()='Šiaulių regionas']/following::tr[2]/td[4]";
+
+            // Locate the desired node
+            var node = htmlDoc.DocumentNode.SelectSingleNode(xpath);
+
+            // Extract and display the value
+            if (node != null)
+            {
+                string alytausRegionTinkami = node.InnerText.Trim();
+                return int.Parse(alytausRegionTinkami);
+            }
+            else
+            {
+                _logger.LogWarning("Value not found for Šiaulių regionas.");
+            }
+            return 0;
+        }
+
+        private int GetReg4Acceptable()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var htmlDoc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // XPath to find the Alytaus region row under the "PAGAL REGIONUS" table
+            string xpath = "//table[caption/h3[text()='PAGAL REGIONUS']]//h3[text()='Panevėžio regionas']/following::tr[2]/td[4]";
+
+            // Locate the desired node
+            var node = htmlDoc.DocumentNode.SelectSingleNode(xpath);
+
+            // Extract and display the value
+            if (node != null)
+            {
+                string alytausRegionTinkami = node.InnerText.Trim();
+                return int.Parse(alytausRegionTinkami);
+            }
+            else
+            {
+                _logger.LogWarning("Value not found for Panevėžio regionas.");
+            }
+            return 0;
+        }
+
+        private int GetReg3Acceptable()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var htmlDoc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // XPath to find the Alytaus region row under the "PAGAL REGIONUS" table
+            string xpath = "//table[caption/h3[text()='PAGAL REGIONUS']]//h3[text()='Klaipėdos regionas']/following::tr[2]/td[4]";
+
+            // Locate the desired node
+            var node = htmlDoc.DocumentNode.SelectSingleNode(xpath);
+
+            // Extract and display the value
+            if (node != null)
+            {
+                string alytausRegionTinkami = node.InnerText.Trim();
+                return int.Parse(alytausRegionTinkami);
+            }
+            else
+            {
+                _logger.LogWarning("Value not found for Klaipėdos regionas.");
+            }
+            return 0;
+        }
+
+        private int GetReg2Acceptable()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var htmlDoc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // XPath to find the Alytaus region row under the "PAGAL REGIONUS" table
+            string xpath = "//table[caption/h3[text()='PAGAL REGIONUS']]//h3[text()='Kauno regionas']/following::tr[2]/td[4]";
+
+            // Locate the desired node
+            var node = htmlDoc.DocumentNode.SelectSingleNode(xpath);
+
+            // Extract and display the value
+            if (node != null)
+            {
+                string alytausRegionTinkami = node.InnerText.Trim();
+                return int.Parse(alytausRegionTinkami);
+            }
+            else
+            {
+                _logger.LogWarning("Value not found for Kauno regionas.");
+            }
+            return 0;
+        }
+
+        private int GetReg1Acceptable()
+        {
+            // Load the HTML document
+            var web = new HtmlWeb();
+            var htmlDoc = web.Load("https://www.karys.lt/tarnybos-budai/nuolatine-privalomoji-pradine-karo-tarnyba/2025-metu-saukimo-eiga/493");
+
+            // XPath to find the Alytaus region row under the "PAGAL REGIONUS" table
+            string xpath = "//table[caption/h3[text()='PAGAL REGIONUS']]//h3[text()='Alytaus regionas']/following::tr[2]/td[4]";
+
+            // Locate the desired node
+            var node = htmlDoc.DocumentNode.SelectSingleNode(xpath);
+
+            // Extract and display the value
+            if (node != null)
+            {
+                string alytausRegionTinkami = node.InnerText.Trim();
+                return int.Parse(alytausRegionTinkami);
+            }
+            else
+            {
+                _logger.LogWarning("Value not found for Alytaus regionas.");
+            }
+            return 0;
+        }
+
 
         private int GetTotalStartedService()
         {
@@ -326,7 +548,13 @@ namespace draft_data
 
         }
 
-        private async Task UpdatePageFile(DataSet dataSet, int totalAcceptable, int totalStartedService)
+        private async Task UpdatePageFile(DataSet dataSet, int totalAcceptable, int totalStartedService,
+         int reg1Acceptable,
+          int reg2Acceptable,
+           int reg3Acceptable,
+           int reg4Acceptable,
+            int reg5Acceptable,
+             int reg6Acceptable)
         {
 
             Random r = new Random();
@@ -351,15 +579,64 @@ namespace draft_data
                     && d.Info.Contains("iki")
                     && d.Info.Contains("2025"))
                  .Count();
+
             int draftProcedureInProgress = lastDataSet.Draftees.Where(d => d.Info.Contains("šaukimo procedūros vykdomos")).Count();
             int isAsignedAndNeedsToArrive = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote atvykti į")).Count();
             int quicklyHasToContactAndArrive = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote skubiai susisiekti arba atvykti")).Count();
             int hasToAttendMedicalScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote atvykti pasitikrinti sveikatos")).Count();
             int hasToAttendAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote papildomai pasitikrinti sveikatą")).Count();
             int hasToProvideAddtionalInfoAfterAdditionalMedScreening = lastDataSet.Draftees.Where(d => d.Info.Contains("privalote pateikti reikiamus medicininius dokumentus po papildomo ištyrimo")).Count();
+
             int inService = lastDataSet.Draftees.Where(d => d.Info.Contains("atlieka tarnybą")).Count();
             int draftHasBeenPostponed = lastDataSet.Draftees.Where(d => d.Info.Contains("privalomoji karo tarnyba atidėta")).Count();
             int removedFromDraft = lastDataSet.Draftees.Where(d => d.Info.Contains("išbrauktas iš karinės įskaitos")).Count();
+
+
+            int reg1Potential = lastDataSet.Draftees
+                .Where(
+                    d => d.Region == "1" &&
+                    d.Info.Contains("atlieka tarnybą") == false &&
+                    d.Info.Contains("privalomoji karo tarnyba atidėta") == false &&
+                    d.Info.Contains("išbrauktas iš karinės įskaitos") == false
+                ).Count();
+            int reg2Potential = lastDataSet.Draftees
+                .Where(
+                    d => d.Region == "2" &&
+                    d.Info.Contains("atlieka tarnybą") == false &&
+                    d.Info.Contains("privalomoji karo tarnyba atidėta") == false &&
+                    d.Info.Contains("išbrauktas iš karinės įskaitos") == false
+                ).Count();
+            int reg3Potential = lastDataSet.Draftees
+                .Where(
+                    d => d.Region == "3" &&
+                    d.Info.Contains("atlieka tarnybą") == false &&
+                    d.Info.Contains("privalomoji karo tarnyba atidėta") == false &&
+                    d.Info.Contains("išbrauktas iš karinės įskaitos") == false
+                ).Count();
+            int reg4Potential = lastDataSet.Draftees
+                .Where(
+                    d => d.Region == "4" &&
+                    d.Info.Contains("atlieka tarnybą") == false &&
+                    d.Info.Contains("privalomoji karo tarnyba atidėta") == false &&
+                    d.Info.Contains("išbrauktas iš karinės įskaitos") == false
+                ).Count();
+            int reg5Potential = lastDataSet.Draftees
+                .Where(
+                    d => d.Region == "5" &&
+                    d.Info.Contains("atlieka tarnybą") == false &&
+                    d.Info.Contains("privalomoji karo tarnyba atidėta") == false &&
+                    d.Info.Contains("išbrauktas iš karinės įskaitos") == false
+                ).Count();
+            int reg6Potential = lastDataSet.Draftees
+                .Where(
+                    d => d.Region == "6" &&
+                    d.Info.Contains("atlieka tarnybą") == false &&
+                    d.Info.Contains("privalomoji karo tarnyba atidėta") == false &&
+                    d.Info.Contains("išbrauktas iš karinės įskaitos") == false
+                ).Count();
+
+
+
 
             int sumOfMetrics = hasToProvideData +
              hasToProvideDataUntilExact +
@@ -397,7 +674,6 @@ namespace draft_data
 
             }
 
-
             string fileContent = DomainConstants.GetPage(
                 totalAcceptable: totalAcceptable,
                 totalStartedService: totalStartedService,
@@ -412,8 +688,19 @@ namespace draft_data
                 inService: inService,
                 draftHasBeenPostponed: draftHasBeenPostponed,
                 updatedOn: DateTime.Now - TimeSpan.FromMinutes(randomMinutes),
-                removedFromDraft: removedFromDraft);
-
+                removedFromDraft: removedFromDraft,
+                reg1Acceptable: reg1Acceptable,
+                reg2Acceptable: reg2Acceptable,
+                reg3Acceptable: reg3Acceptable,
+                reg4Acceptable: reg4Acceptable,
+                reg5Acceptable: reg5Acceptable,
+                reg6Acceptable: reg6Acceptable,
+                reg1Potential: reg1Potential,
+                reg2Potential: reg2Potential,
+                reg3Potential: reg3Potential,
+                reg4Potential: reg4Potential,
+                reg5Potential: reg5Potential,
+                reg6Potential: reg6Potential);
 
             string appDataDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string filePath = Path.Combine(appDataDir, "draft-content-root/draft-page.html");
