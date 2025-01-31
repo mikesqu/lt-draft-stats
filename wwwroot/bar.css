@@ -205,25 +205,30 @@ body {
 }
 
 
-#distrib-chart th {
-    font-size: 0.68rem;
-}
-
-#distrib-chart tr td {
-    color: white;
-    font-size: 0.55rem;
-    align-items: center;
-}
-
-#distrib-chart tr {
-    margin-right: 0.1rem;
-    margin-left: 0.1rem;
-}
-
 h5 {
     margin-bottom: 4rem;
 }
 
-#distrib-chart tbody {
-    aspect-ratio: 10 / 15;
+
+
+/* responsive, form small screens, use 13px font size */
+@media (max-width: 479px) {
+    #distrib-chart th {
+        font-size: 0.68rem;
+    }
+
+    #distrib-chart tr td {
+        color:  rgb(58, 58, 58);
+        font-size: 0.55rem;
+        align-items: center;
+    }
+
+    #distrib-chart tr {
+        margin-right: 0.1rem;
+        margin-left: 0.1rem;
+    }
+
+    #distrib-chart tbody {
+        aspect-ratio: 10 / 15;
+    }
 }
