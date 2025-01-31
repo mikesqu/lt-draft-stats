@@ -1,5 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css");
 
+
+
+
 .simple-bar-chart {
     --line-count: 10;
     --line-color: currentcolor;
@@ -199,4 +202,28 @@ body {
 
 .charts-css.legend.legend-rectangle li {
     padding: 0.8rem;
+}
+
+
+#distrib-chart th {
+    font-size: 0.68rem;
+}
+
+#distrib-chart tr td {
+    color: white;
+    font-size: 0.55rem;
+    align-items: center;
+}
+
+#distrib-chart tr {
+    margin-right: 0.1rem;
+    margin-left: 0.1rem;
+}
+
+h5 {
+    margin-bottom: 4rem;
+}
+
+#distrib-chart tbody {
+    aspect-ratio: 10 / 15;
 }
