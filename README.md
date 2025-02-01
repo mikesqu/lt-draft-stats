@@ -1,3 +1,9 @@
-Combines data from api and web scrapper to periodically generate a html file and serve it through web api.
+ Combines data from lithuanian military recruiting website (https://www.karys.lt/) and periodically generates a static webpage displaying statistics of the draft.
 
-Saves data to file SQLite database with EF Core.
+##### statistics calulated & displayed:
+* sums of each status
+* current availability of draftees for each region 
+* distribution of draftee statuses for regional lists
+
+
+Saves data to .db file SQLite database with EF Core.
