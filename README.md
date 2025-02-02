@@ -6,4 +6,9 @@
 * distribution of draftee statuses for regional lists
 
 
+
+![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02%2017-39-31.gif)
+
+
+
 Saves data to .db file SQLite database with EF Core.
