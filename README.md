@@ -2,14 +2,13 @@
 
 ##### statistics calulated & displayed:
 * sums of each status
-* current availability of draftees for each region 
-* distribution of draftee statuses for regional lists
-
-
-![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02-17-46-42.gif)
-![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02-17-39-31.gif)
-
-
+* current availability of draftees in each region 
+* distribution of draftee statuses in regional lists
 
 
 Saves data to .db file SQLite database with EF Core.
+
+![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02-17-39-31.gif)
+![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02-17-46-42.gif)
+
+
