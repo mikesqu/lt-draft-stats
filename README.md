@@ -6,8 +6,8 @@
 * distribution of draftee statuses for regional lists
 
 
-
-![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02%2017-39-31.gif)
+![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02-2017-46-42.gif)
+![](https://github.com/mikesqu/lt-draft-stats/blob/main/2025-02-02-2017-39-31.gif)
 
 
 
