@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
+using Microsoft.OpenApi.Expressions;
 
 namespace draft_data
 {
@@ -146,6 +147,7 @@ namespace draft_data
                         <p> Statistika paskutinį kartą skaičiuota: {updatedOn.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture)} </p>
                     </div>
                     
+                    
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
                         <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">25149</span><br>
@@ -159,12 +161,17 @@ namespace draft_data
                             <span class=""w3-xlarge"">{totalAcceptable}</span><br>
                             Iš viso pripažinti tinkami (laukiantys priskyrimo)
                         </div>
+                        <div class=""w3-quarter w3-section"">
+                            <span class=""w3-xlarge"">{3865 - totalAcceptable}</span><br>
+                            Iš viso trūksta
+                        </div>
                          <div class=""w3-quarter w3-section"">
                             <span class=""w3-xlarge"">{totalStartedService}</span><br>
                             Iš viso pradėjo tarnybą
                         </div>
                     </div>
 
+                    <h5 style=""font-weight: bold;"">Viso sąrašo statusų statistika</h5>
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
                         <div class=""w3-quarter w3-section"">
@@ -211,11 +218,15 @@ namespace draft_data
                             <span class=""w3-xlarge"">{removedFromDraft}</span><br>
                             Išbraukti iš karinės įskaitos
                         </div>
+                        <div class=""w3-quarter w3-section"">
+                            <span class=""w3-xlarge"">{25149 - hasToProvideData - hasToProvideDataUntilExact - draftProcedureInProgress - isAsignedAndNeedsToArrive - quicklyHasToContactAndArrive - hasToAttendMedicalScreening - hasToAttendAdditionalMedScreening - hasToProvideAddtionalInfoAfterAdditionalMedScreening - inService - draftHasBeenPostponed - removedFromDraft}</span><br>
+                            Statusų likutis: 
+                        </div>
                     </div>
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
 
-                        <h5>Šaukimo eiga pagal regionus</h5>
+                        <h5 style=""font-weight: bold;"">Šaukimo eiga pagal regionus</h5>
                         <div class=""simple-bar-chart"">
 
                             <div class=""item"" style=""--clr: #5EB344; --val: {reg1Perc}"">
@@ -249,38 +260,46 @@ namespace draft_data
                             </div>
                         </div>
 
-                         <h5>Eiliškumas pagal galimai tinkamus</h5>
-                        <div class=""simple-bar-chart"">
 
-                            <div class=""item"" style=""--clr: #5EB344; --val: {reg1PercPot}"">
-                                <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg1Acceptable} / {reg1Potential})</div>
+                        <h5 style=""font-weight: bold;"">Spėjamas NPPKTN eiliškumas pagal galimai tinkamus</h5>
+                        <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
+                            <div class=""w3-quarter w3-section"">
+                                <span class=""w3-xlarge"">{reg1Acceptable} / {reg1Potential}</span>
+                                <br>
+                                Alytaus reg.
                             </div>
-
-                             <div class=""item"" style=""--clr: #FCB72A; --val: {reg2PercPot}"">
-                                <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg2Acceptable} / {reg2Potential})</div>
+                            <div class=""w3-quarter w3-section"">
+                                <span class=""w3-xlarge"">{reg2Acceptable} / {reg2Potential}</span>
+                                <br>
+                                Kauno reg.
                             </div>
-                             <div class=""item"" style=""--clr: #F8821A; --val: {reg3PercPot}"">
-                                <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg3Acceptable} / {reg3Potential})</div>
+                            <div class=""w3-quarter w3-section"">
+                                <span class=""w3-xlarge"">{reg3Acceptable} / {reg3Potential}</span>
+                                <br>
+                                Klaipėdos reg.
                             </div>
-                             <div class=""item"" style=""--clr: #E0393E; --val: {reg4PercPot}"">
-                                <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg4Acceptable} / {reg4Potential})</div>
+                            <div class=""w3-quarter w3-section"">
+                                <span class=""w3-xlarge""> {reg4Acceptable} / {reg4Potential}</span>
+                                <br>
+                                Panevėžio reg.
                             </div>
-                             <div class=""item"" style=""--clr: #E0393E; --val: {reg5PercPot}"">
-                                <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg5Acceptable} / {reg5Potential})</div>
+                            <div class=""w3-quarter w3-section"">
+                                <span class=""w3-xlarge"">{reg5Acceptable} / {reg5Potential}</span>
+                                <br>
+                                Šiaulių reg.
                             </div>
-                             <div class=""item"" style=""--clr: #963D97; --val: {reg6PercPot}"">
-                                <div class=""label"">Alytaus reg.</div>
-                                <div class=""value"">{reg6Acceptable} / {reg6Potential})</div>
+                            <div class=""w3-quarter w3-section"">
+                                <span class=""w3-xlarge"">{reg6Acceptable} / {reg6Potential}</span>
+                                <br>
+                                Vilniaus reg.
                             </div>
-
                         </div>
 
-                        <h4>Distribucija Vilniaus regione:</h4>
+                        <br/>
+                        <br/>
+                        <br/>
+
+                        <h4 style=""font-weight: bold;"" >Distribucija Vilniaus regione:</h4>
                             <table id=""distrib-chart"" class=""charts-css column multiple stacked show-labels"">
 
                                 <tbody>

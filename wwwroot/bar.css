@@ -1,8 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/charts.css/dist/charts.min.css");
 
 
-
-
 .simple-bar-chart {
     --line-count: 10;
     --line-color: currentcolor;
@@ -203,22 +201,33 @@ body {
 }
 
 
-h5 {
-    margin-bottom: 4rem;
+
+
+#distrib-chart tr td {
+    color: rgb(58, 58, 58);
+    font-size: 0.55rem;
+    align-items: center;
+
 }
 
+.charts-css.legend.legend-rectangle {
+    flex-direction: row;
+    flex-flow: wrap;
+}
 
+#numbering-box {
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+}
 
 /* responsive, form small screens, use 13px font size */
 @media (max-width: 479px) {
+
+
     #distrib-chart th {
         font-size: 0.68rem;
-    }
-
-    #distrib-chart tr td {
-        color:  rgb(58, 58, 58);
-        font-size: 0.55rem;
-        align-items: center;
     }
 
     #distrib-chart tr {
