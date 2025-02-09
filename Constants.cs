@@ -295,9 +295,6 @@ namespace draft_data
                             </div>
                         </div>
 
-                        <br/>
-                        <br/>
-                        <br/>
 
                         <h4 style=""font-weight: bold;"" >Distribucija Vilniaus regione:</h4>
                             <table id=""distrib-chart"" class=""charts-css column multiple stacked show-labels"">
