@@ -131,6 +131,7 @@ namespace draft_data
                     <title>2025 šauktinių statistika</title>
                     <meta charset=""UTF-8"">
                     <meta name=""viewport"" content=""width=device-width, initial-scale=1"">
+                    <link rel=""stylesheet"" href=""https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css""/>
                     <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/w3.css"">
                     <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/css.css"">
                     <link rel=""stylesheet"" href=""/W3.CSS%20Template_files/font-awesome.min.css"">
@@ -139,94 +140,94 @@ namespace draft_data
                 </head>
                 <body class=""w3-black"">
 
-                    <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
+                    <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey animate__animated animate__slideInLeft"">
                         <h3>2025 metų šauktinių sąrašo statistika: </h3>
                     </div>
 
-                    <div>
+                    <div class=""animate__animated animate__slideInLeft"">
                         <p> Statistika paskutinį kartą skaičiuota: {updatedOn.ToString("yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture)} </p>
                     </div>
                     
                     
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">25149</span><br>
                             Viso pašaukta
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">3865</span><br>
                             2025 m. šaukimo planas
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{totalAcceptable}</span><br>
                             Iš viso pripažinti tinkami (laukiantys priskyrimo)
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{3865 - totalAcceptable}</span><br>
                             Iš viso trūksta
                         </div>
-                         <div class=""w3-quarter w3-section"">
+                         <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{totalStartedService}</span><br>
                             Iš viso pradėjo tarnybą
                         </div>
                     </div>
 
-                    <h5 style=""font-weight: bold;"">Viso sąrašo statusų statistika</h5>
+                    <h5 class=""animate__animated animate__slideInLeft"" style=""font-weight: bold;"">Viso sąrašo statusų statistika</h5>
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{hasToProvideData}</span><br>
                             Privalo pateikti duomenis
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{hasToProvideDataUntilExact}</span><br>
                             Privalo pateikti duomenis iki konkrečios datos
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{draftProcedureInProgress}</span><br>
                             Šaukimo proceduros vykdomos
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{isAsignedAndNeedsToArrive}</span><br>
                             Privalo atvykti į nurodytą skyrių
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{quicklyHasToContactAndArrive}</span><br>
                             Privalo skubiai susiekti arba atvykti į nurodytą skyrių
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{hasToAttendMedicalScreening}</span><br>
                             Privalo atvykti pasitikrinti sveikatos
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{hasToAttendAdditionalMedScreening}</span><br>
                             Privalo atvykti papildomai pasitikrinti sveikatos
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{hasToProvideAddtionalInfoAfterAdditionalMedScreening}</span><br>
                             Privalo pateikti medicininius dokumentus po papildomo ištyrimo
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{inService}</span><br>
                             Atlieka tarnybą
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{draftHasBeenPostponed}</span><br>
                             Privalomoji karo tarnyba atidėta
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{removedFromDraft}</span><br>
                             Išbraukti iš karinės įskaitos
                         </div>
-                        <div class=""w3-quarter w3-section"">
+                        <div class=""w3-quarter w3-section animate__animated animate__fadeInRightBig"">
                             <span class=""w3-xlarge"">{25149 - hasToProvideData - hasToProvideDataUntilExact - draftProcedureInProgress - isAsignedAndNeedsToArrive - quicklyHasToContactAndArrive - hasToAttendMedicalScreening - hasToAttendAdditionalMedScreening - hasToProvideAddtionalInfoAfterAdditionalMedScreening - inService - draftHasBeenPostponed - removedFromDraft}</span><br>
-                            Statusų likutis: 
+                            Statusų likutis
                         </div>
                     </div>
 
                     <div class=""w3-row w3-center w3-padding-16 w3-section w3-light-grey"">
 
-                        <h5 style=""font-weight: bold;"">Šaukimo eiga pagal regionus</h5>
+                        <h5 style=""font-weight: bold; margin-bottom: 1.5rem;"">Šaukimo eiga pagal regionus</h5>
                         <div class=""simple-bar-chart"">
 
                             <div class=""item"" style=""--clr: #5EB344; --val: {reg1Perc}"">
@@ -387,7 +388,7 @@ namespace draft_data
                                 </tbody>
                             </table>
 
-                            <ul class=""charts-css legend legend-rectangle"" style=""margin-top: 6.5rem;"">
+                            <ul class=""charts-css legend legend-rectangle"">
                                 <li> Privalo pateikti duomenis </li>
                                 <li> Privalo pateikti duomenis iki konkrečios datos </li>
                                 <li> Šaukimo proceduros vykdomos </li>

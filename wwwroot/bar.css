@@ -238,4 +238,12 @@ body {
     #distrib-chart tbody {
         aspect-ratio: 10 / 15;
     }
+
+    .charts-css.legend.legend-rectangle {
+        font-size: 12px;
+    }
+
+    .simple-bar-chart {
+        font-size: 12px;
+    }
 }
