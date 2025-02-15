@@ -144,6 +144,8 @@ internal class Program
 
         app.UseStaticFiles();
 
+        app.UseHttpsRedirection();
+
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
@@ -151,11 +153,9 @@ internal class Program
             app.UseSwaggerUI();
         }
 
-
         app.UseRouting();
         app.MapControllers();
 
-        app.UseHttpsRedirection();
 
         app.Run();
     }

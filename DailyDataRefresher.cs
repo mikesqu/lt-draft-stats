@@ -18,200 +18,250 @@ namespace draft_data
     {
         private readonly ILogger<DailyDataRefresher> _logger;
         private readonly IHttpClientFactory _cFactory;
+        private readonly IHostEnvironment _env;
 
-        public DailyDataRefresher(ILogger<DailyDataRefresher> logger, IHttpClientFactory cFactory)
+        public DailyDataRefresher(ILogger<DailyDataRefresher> logger, IHttpClientFactory cFactory, IHostEnvironment environment)
         {
             _logger = logger;
             _cFactory = cFactory;
+            _env = environment;
         }
 
         public async Task Execute(IJobExecutionContext context)
         {
-
-            // Random r = new Random();
-            // int randomMinutes = (int)r.NextInt64(10, 90);
-            // TimeSpan delay = TimeSpan.FromMinutes(randomMinutes);
-
-
-            // await Task.Delay(delay);
-
-            // _logger.LogInformation($"starting {nameof(DailyDataRefresher)}.{nameof(Execute)} ... after delay {delay.TotalMinutes} minutes");
-
-
             _logger.LogInformation($"starting {nameof(DailyDataRefresher)}.{nameof(Execute)} ");
 
-            // ---------------------------------------
-
-
-            // alytus region
-            string serializedResult1 = await GetDataFromAPI(region: 1, range: "0-2399");
-
-            // kaunas region
-            string serializedResult2 = await GetDataFromAPI(region: 2, range: "0-5899");
-
-            // klaipeda region
-            string serializedResult3 = await GetDataFromAPI(region: 3, range: "0-4499");
-
-            // panevezio region
-            string serializedResult4 = await GetDataFromAPI(region: 4, range: "0-2499");
-
-            // siauliu region
-            string serializedResult5 = await GetDataFromAPI(region: 5, range: "0-3099");
-
-            // vilnius region
-            string serializedResult6 = await GetDataFromAPI(region: 6, range: "0-7699");
-
-            string stringResponsePreview1 = serializedResult1.Substring(0, 20);
-            string stringResponsePreview2 = serializedResult2.Substring(0, 20);
-            string stringResponsePreview3 = serializedResult3.Substring(0, 20);
-            string stringResponsePreview4 = serializedResult4.Substring(0, 20);
-            string stringResponsePreview5 = serializedResult5.Substring(0, 20);
-            string stringResponsePreview6 = serializedResult6.Substring(0, 20);
-
-            _logger.LogInformation($"received response preview region 1: {stringResponsePreview1}");
-            _logger.LogInformation($"received response preview region 2: {stringResponsePreview2}");
-            _logger.LogInformation($"received response preview region 3:{stringResponsePreview3}");
-            _logger.LogInformation($"received response preview region 4:{stringResponsePreview4}");
-            _logger.LogInformation($"received response preview region 5: {stringResponsePreview5}");
-            _logger.LogInformation($"received response preview region 6: {stringResponsePreview6}");
-
-
-            //deserialize dataset
-            DataSet newSet = new DataSet();
-            newSet.Draftees = new List<Draftee>();
-            newSet.CreatedOn = DateTime.Now;
-
-            IList<Draftee> region1Draftees = DeserializeDataSet(serializedResult1, region: "1");
-            IList<Draftee> region2Draftees = DeserializeDataSet(serializedResult2, region: "2");
-            IList<Draftee> region3Draftees = DeserializeDataSet(serializedResult3, region: "3");
-            IList<Draftee> region4Draftees = DeserializeDataSet(serializedResult4, region: "4");
-            IList<Draftee> region5Draftees = DeserializeDataSet(serializedResult5, region: "5");
-            IList<Draftee> region6Draftees = DeserializeDataSet(serializedResult6, region: "6");
-
-            _logger.LogInformation("deserialized draftees count region 1 {drafteesCount}", region1Draftees.Count);
-            _logger.LogInformation("deserialized draftees count region 2 {drafteesCount}", region2Draftees.Count);
-            _logger.LogInformation("deserialized draftees count region 3 {drafteesCount}", region3Draftees.Count);
-            _logger.LogInformation("deserialized draftees count region 4 {drafteesCount}", region4Draftees.Count);
-            _logger.LogInformation("deserialized draftees count region 5 {drafteesCount}", region5Draftees.Count);
-            _logger.LogInformation("deserialized draftees count region 6 {drafteesCount}", region6Draftees.Count);
-
-            List<Draftee> tempList = newSet.Draftees.ToList();
-
-            tempList.AddRange(region1Draftees);
-            tempList.AddRange(region2Draftees);
-            tempList.AddRange(region3Draftees);
-            tempList.AddRange(region4Draftees);
-            tempList.AddRange(region5Draftees);
-            tempList.AddRange(region6Draftees);
-
-            newSet.Draftees = tempList;
-
-
-            _logger.LogInformation("deserialized dataset with {drafteesCount} with CreatedOn: {datetime}", newSet.Draftees.Count, newSet.CreatedOn);
-
-            // store a dataset
-            await StoreNewDataSet(newSet);
-
-            _logger.LogInformation("stored new dataset");
-
-            int totalAcceptable = 0;
-            int totalStartedService = 0;
-
-            int reg1Acceptable = 0;
-            int reg2Acceptable = 0;
-            int reg3Acceptable = 0;
-            int reg4Acceptable = 0;
-            int reg5Acceptable = 0;
-            int reg6Acceptable = 0;
-
-            try
+            if (_env.IsDevelopment())
             {
-                totalAcceptable = GetTotalAcceptableCount();
-            }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read totalAcceptable");
-            }
+                string jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "reg6.json");
+                string jsonContent = File.ReadAllText(jsonFilePath);
+
+                // You can now use the jsonContent string to work with the JSON data
+                _logger.LogInformation($"JSON file content: {jsonContent.Substring(0, 50)}");
+
+                DataSet newSet = new DataSet();
+                newSet.CreatedOn = DateTime.Now;
 
 
-            try
-            {
-                totalStartedService = GetTotalStartedService();
+                IList<TempDraftee> tempDraftees = new List<TempDraftee>();
+
+                try
+                {
+                    tempDraftees = JsonSerializer.Deserialize<List<TempDraftee>>(jsonContent, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true,
+                    });
+                }
+                catch (JsonException ex)
+                {
+                    _logger.LogInformation($"Error deserializing into TempDraftee: {ex.Message}");
+                    newSet.Draftees = new List<Draftee>();
+                }
+
+                _logger.LogInformation($"tempDraftees.Count: {tempDraftees.Count}");
+
+                DataSet lastDataSet = newSet;
+                lastDataSet.Draftees = new List<Draftee>();
+
+
+                foreach (var td in tempDraftees)
+                {
+                    lastDataSet.Draftees.Add(new Draftee()
+                    {
+                        Position = int.Parse(td.Pos),
+                        Number = td.Number,
+                        Name = td.Name,
+                        LastName = td.Lastname,
+                        BirthDateYear = int.Parse(td.Bdate),
+                        Department = int.Parse(td.Department),
+                        Info = td.Info,
+                        Region = "6"
+                    });
+                }
+
+                await UpdatePageFile(newSet, 315,
+                    0,
+                    reg1Acceptable: 315,
+                    reg2Acceptable: 257,
+                    reg3Acceptable: 124,
+                    reg4Acceptable: 7,
+                    reg5Acceptable: 364,
+                    reg6Acceptable: 2
+                );
+
             }
-            catch (Exception)
+            else
             {
-                _logger.LogError("Failed to read totalStartedService");
-            }
+
+                // alytus region
+                string serializedResult1 = await GetDataFromAPI(region: 1, range: "0-2399");
+
+                // kaunas region
+                string serializedResult2 = await GetDataFromAPI(region: 2, range: "0-5899");
+
+                // klaipeda region
+                string serializedResult3 = await GetDataFromAPI(region: 3, range: "0-4499");
+
+                // panevezio region
+                string serializedResult4 = await GetDataFromAPI(region: 4, range: "0-2499");
+
+                // siauliu region
+                string serializedResult5 = await GetDataFromAPI(region: 5, range: "0-3099");
+
+                // vilnius region
+                string serializedResult6 = await GetDataFromAPI(region: 6, range: "0-7699");
+
+                string stringResponsePreview1 = serializedResult1.Substring(0, 20);
+                string stringResponsePreview2 = serializedResult2.Substring(0, 20);
+                string stringResponsePreview3 = serializedResult3.Substring(0, 20);
+                string stringResponsePreview4 = serializedResult4.Substring(0, 20);
+                string stringResponsePreview5 = serializedResult5.Substring(0, 20);
+                string stringResponsePreview6 = serializedResult6.Substring(0, 20);
+
+                _logger.LogInformation($"received response preview region 1: {stringResponsePreview1}");
+                _logger.LogInformation($"received response preview region 2: {stringResponsePreview2}");
+                _logger.LogInformation($"received response preview region 3:{stringResponsePreview3}");
+                _logger.LogInformation($"received response preview region 4:{stringResponsePreview4}");
+                _logger.LogInformation($"received response preview region 5: {stringResponsePreview5}");
+                _logger.LogInformation($"received response preview region 6: {stringResponsePreview6}");
+
+
+                //deserialize dataset
+                DataSet newSet = new DataSet();
+                newSet.Draftees = new List<Draftee>();
+                newSet.CreatedOn = DateTime.Now;
+
+                IList<Draftee> region1Draftees = DeserializeDataSet(serializedResult1, region: "1");
+                IList<Draftee> region2Draftees = DeserializeDataSet(serializedResult2, region: "2");
+                IList<Draftee> region3Draftees = DeserializeDataSet(serializedResult3, region: "3");
+                IList<Draftee> region4Draftees = DeserializeDataSet(serializedResult4, region: "4");
+                IList<Draftee> region5Draftees = DeserializeDataSet(serializedResult5, region: "5");
+                IList<Draftee> region6Draftees = DeserializeDataSet(serializedResult6, region: "6");
+
+                _logger.LogInformation("deserialized draftees count region 1 {drafteesCount}", region1Draftees.Count);
+                _logger.LogInformation("deserialized draftees count region 2 {drafteesCount}", region2Draftees.Count);
+                _logger.LogInformation("deserialized draftees count region 3 {drafteesCount}", region3Draftees.Count);
+                _logger.LogInformation("deserialized draftees count region 4 {drafteesCount}", region4Draftees.Count);
+                _logger.LogInformation("deserialized draftees count region 5 {drafteesCount}", region5Draftees.Count);
+                _logger.LogInformation("deserialized draftees count region 6 {drafteesCount}", region6Draftees.Count);
+
+                List<Draftee> tempList = newSet.Draftees.ToList();
+
+                tempList.AddRange(region1Draftees);
+                tempList.AddRange(region2Draftees);
+                tempList.AddRange(region3Draftees);
+                tempList.AddRange(region4Draftees);
+                tempList.AddRange(region5Draftees);
+                tempList.AddRange(region6Draftees);
+
+                newSet.Draftees = tempList;
+
+
+                _logger.LogInformation("deserialized dataset with {drafteesCount} with CreatedOn: {datetime}", newSet.Draftees.Count, newSet.CreatedOn);
+
+                // store a dataset
+                await StoreNewDataSet(newSet);
+
+                _logger.LogInformation("stored new dataset");
+
+                int totalAcceptable = 0;
+                int totalStartedService = 0;
+
+                int reg1Acceptable = 0;
+                int reg2Acceptable = 0;
+                int reg3Acceptable = 0;
+                int reg4Acceptable = 0;
+                int reg5Acceptable = 0;
+                int reg6Acceptable = 0;
+
+                try
+                {
+                    totalAcceptable = GetTotalAcceptableCount();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read totalAcceptable");
+                }
+
+
+                try
+                {
+                    totalStartedService = GetTotalStartedService();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read totalStartedService");
+                }
 
 
 
-            try
-            {
-                reg1Acceptable = GetReg1Acceptable();
-            }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read reg1Acceptable");
-            }
+                try
+                {
+                    reg1Acceptable = GetReg1Acceptable();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read reg1Acceptable");
+                }
 
-            try
-            {
-                reg2Acceptable = GetReg2Acceptable();
-            }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read reg2Acceptable");
-            }
+                try
+                {
+                    reg2Acceptable = GetReg2Acceptable();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read reg2Acceptable");
+                }
 
-            try
-            {
-                reg3Acceptable = GetReg3Acceptable();
-            }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read reg3Acceptable");
-            }
+                try
+                {
+                    reg3Acceptable = GetReg3Acceptable();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read reg3Acceptable");
+                }
 
-            try
-            {
-                reg4Acceptable = GetReg4Acceptable();
-            }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read reg4Acceptable");
-            }
+                try
+                {
+                    reg4Acceptable = GetReg4Acceptable();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read reg4Acceptable");
+                }
 
-            try
-            {
-                reg5Acceptable = GetReg5Acceptable();
+                try
+                {
+                    reg5Acceptable = GetReg5Acceptable();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read reg5Acceptable");
+                }
+
+                try
+                {
+                    reg6Acceptable = GetReg6Acceptable();
+                }
+                catch (Exception)
+                {
+                    _logger.LogError("Failed to read reg6Acceptable");
+                }
+
+
+                await UpdatePageFile(newSet, totalAcceptable,
+                    totalStartedService,
+                    reg1Acceptable: reg1Acceptable,
+                    reg2Acceptable: reg2Acceptable,
+                    reg3Acceptable: reg3Acceptable,
+                    reg4Acceptable: reg4Acceptable,
+                    reg5Acceptable: reg5Acceptable,
+                    reg6Acceptable: reg6Acceptable
+                );
+
+                _logger.LogInformation("updated page file");
             }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read reg5Acceptable");
-            }
-
-            try
-            {
-                reg6Acceptable = GetReg6Acceptable();
-            }
-            catch (Exception)
-            {
-                _logger.LogError("Failed to read reg6Acceptable");
-            }
-
-
-            await UpdatePageFile(newSet, totalAcceptable,
-                totalStartedService,
-                reg1Acceptable: reg1Acceptable,
-                reg2Acceptable: reg2Acceptable,
-                reg3Acceptable: reg3Acceptable,
-                reg4Acceptable: reg4Acceptable,
-                reg5Acceptable: reg5Acceptable,
-                reg6Acceptable: reg6Acceptable
-            );
-
-            _logger.LogInformation("updated page file");
-
 
             // ----------------------------------------
             _logger.LogInformation($"finishing {nameof(DailyDataRefresher)}.{nameof(Execute)} ...");
